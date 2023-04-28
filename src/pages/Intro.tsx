@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { css } from '@emotion/react';
+import Nav from 'components/nav/Nav';
 
 const IntroStyle = css({
     width: '100vw',
@@ -8,7 +8,11 @@ const IntroStyle = css({
 });
 
 const Intro = () => {
-    return <div css={IntroStyle}>Intro</div>;
+    return (
+        <div css={IntroStyle}>
+            <Nav></Nav>
+        </div>
+    );
 };
 
 export default Intro;
