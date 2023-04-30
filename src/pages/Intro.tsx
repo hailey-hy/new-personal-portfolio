@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
+import { useState } from 'react';
 import { css } from '@emotion/react';
 import Nav from 'components/nav/Nav';
+import { NavPurposeType } from 'components/nav/Nav';
 
 const IntroStyle = css({
     width: '100vw',
@@ -8,9 +10,13 @@ const IntroStyle = css({
 });
 
 const Intro = () => {
+    const [navPurpose, setNavPurpose] = useState<NavPurposeType>({
+        purpose: 'Intro',
+    });
+
     return (
         <div css={IntroStyle}>
-            <Nav></Nav>
+            <Nav navPurpose={navPurpose}></Nav>
         </div>
     );
 };
