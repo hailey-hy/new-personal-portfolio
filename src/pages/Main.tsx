@@ -1,15 +1,12 @@
+/** @jsxImportSource @emotion/react */
 import { useState } from 'react';
+import { css } from '@emotion/react';
 import Nav from 'components/nav/Nav';
-import { NavPurposeType } from 'components/nav/Nav';
 
 const Main = () => {
-    const [navPurpose, setNavPurpose] = useState<NavPurposeType>({
-        purpose: 'Main',
-    });
-
     return (
         <div>
-            <Nav navPurpose={navPurpose}></Nav>
+            <Nav></Nav>
         </div>
     );
 };
