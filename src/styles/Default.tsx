@@ -17,6 +17,24 @@ const Default = css({
         margin: '13px',
     },
 
+    'h2, h3, h4 ': {
+        margin: 0,
+        lineHeight: '2rem',
+    },
+    h2: {
+        //제목
+        fontSize: '25px',
+        margin: '1rem 0 1rem 0',
+    },
+    h3: {
+        //중요 설명
+        fontSize: '18px',
+    },
+    h4: {
+        //세부 설명
+        fontWeight: '400',
+    },
+
     // 미디어 쿼리
 });
 

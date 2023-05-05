@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import IntroText from './IntroText';
+import IntroArrow from './IntroArrow';
 
 const introContainerStyle = css({
     color: 'white',
@@ -19,6 +20,7 @@ const IntroContainer = () => {
     return (
         <div css={introContainerStyle}>
             <IntroText></IntroText>
+            <IntroArrow></IntroArrow>
         </div>
     );
 };
