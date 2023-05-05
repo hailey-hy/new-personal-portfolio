@@ -20,14 +20,6 @@ const BtnContent = {
             url: '/',
         },
         {
-            title: '개발 정원',
-            url: '/',
-        },
-        {
-            title: 'PORFOLIO',
-            url: '/',
-        },
-        {
             title: 'ACTIVITIES',
             url: '/',
         },
