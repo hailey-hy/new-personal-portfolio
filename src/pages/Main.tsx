@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from 'react';
 import { css } from '@emotion/react';
-import Nav from 'components/nav/Nav';
+import Nav from 'components/aside/Aside';
 import Section from 'components/article/Section';
 
 const mainStyle = css({
