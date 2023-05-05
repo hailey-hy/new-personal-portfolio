@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { css } from '@emotion/react';
 import NavBtnBg from './NavBtnBg';
 import BtnContent from 'constants/BtnConstants';
+import { BACKGROUND } from 'styles/Colors';
 
 const NavStyle = css({
-    background: '#232427',
+    background: `${BACKGROUND}`,
     height: '100vh',
     width: '20vw',
     padding: '100px 30px',
@@ -15,6 +16,7 @@ const NavStyle = css({
     gap: '25px',
     position: 'sticky',
     top: '0px',
+    bottom: '100vh',
 });
 
 export interface NavBtnType {

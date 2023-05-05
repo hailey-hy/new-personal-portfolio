@@ -27,6 +27,7 @@ const Main = () => {
     });
     return (
         <div css={mainStyle}>
+            <Nav></Nav>
             <section css={mainSectionStyle}>
                 <Section sectionProps={projectProps}></Section>
                 <Section sectionProps={articleProps}></Section>

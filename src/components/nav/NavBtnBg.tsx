@@ -1,13 +1,13 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import { NavBtnType } from './Nav';
+import { HIGHLITGHT } from 'styles/Colors';
 
 const NavBtnStyle = css({
-    color: 'white',
-    fontSize: 25,
-    fontWeight: 900,
+    fontSize: 18,
+    fontWeight: 400,
     ':hover': {
-        color: '#BADBFA',
+        color: `${HIGHLITGHT}`,
         cursor: 'pointer',
     },
 });
