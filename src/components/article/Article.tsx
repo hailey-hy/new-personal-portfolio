@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import ArticleDetail from './ArticleDetail';
-import { ArticlePropsType } from 'components/article/Section';
+import { ArticlePropsType } from './Section';
 import { useEffect, useState } from 'react';
 
 const articleStyle = css({

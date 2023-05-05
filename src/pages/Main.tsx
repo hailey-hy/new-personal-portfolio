@@ -23,7 +23,7 @@ const Main = () => {
         type: 'PROJECT',
     });
     const [articleProps, setArticleProps] = useState<sectionType>({
-        type: 'ARTICLE',
+        type: 'ACTIVITY',
     });
     return (
         <div css={mainStyle}>
