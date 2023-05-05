@@ -1,5 +1,5 @@
 const BtnContent = {
-    Intro: [
+    Nav: [
         {
             title: 'GITHUB',
             url: 'https://github.com/hailey-hy',
