@@ -2,6 +2,8 @@
 import { css } from '@emotion/react';
 import Button from '@mui/material/Button';
 import { headerButtonsType } from './HeaderContainer';
+import { useLinkToPage } from 'hooks/useLinkToPage';
+import { useEffect } from 'react';
 
 interface buttonType {
     prop: headerButtonsType;
@@ -17,6 +19,9 @@ const buttonStyle = css({
 
 const HeaderButtons = ({ prop }: buttonType) => {
     const { title, url } = prop;
+    useEffect(() => {
+        useLinkToPage(title, url);
+    }, [title, url]);
 
     return (
         <div className={title}>
