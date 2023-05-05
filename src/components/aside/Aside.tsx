@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { useState } from 'react';
 import { css } from '@emotion/react';
-import NavBtnBg from './NavBtnBg';
+import AsideBtnBg from './AsideBtnBg';
 import BtnContent from 'constants/BtnConstants';
 import { BACKGROUND } from 'styles/Colors';
 
-const NavStyle = css({
+const AsideStyle = css({
     background: `${BACKGROUND}`,
     height: '100vh',
     width: '20vw',
@@ -19,21 +19,23 @@ const NavStyle = css({
     bottom: '100vh',
 });
 
-export interface NavBtnType {
+export interface AsideBtnType {
     title: string;
     url: string;
 }
 
-const Nav = () => {
-    const [btnContent, setBtnContent] = useState<NavBtnType[]>(BtnContent.Main);
+const Aside = () => {
+    const [btnContent, setBtnContent] = useState<AsideBtnType[]>(
+        BtnContent.Main,
+    );
 
     return (
-        <div css={NavStyle}>
+        <aside css={AsideStyle}>
             {btnContent.map((btn) => (
-                <NavBtnBg btn={btn} />
+                <AsideBtnBg btn={btn} />
             ))}
-        </div>
+        </aside>
     );
 };
 
-export default Nav;
+export default Aside;

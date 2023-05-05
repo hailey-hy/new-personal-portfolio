@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { NavBtnType } from './Nav';
+import { AsideBtnType } from './Aside';
 import { HIGHLITGHT } from 'styles/Colors';
 
-const NavBtnStyle = css({
+const AsideBtnStyle = css({
     fontSize: 18,
     fontWeight: 400,
     ':hover': {
@@ -12,11 +12,11 @@ const NavBtnStyle = css({
     },
 });
 
-type NavBtnProps = {
-    btn: NavBtnType;
+type AsideBtnProps = {
+    btn: AsideBtnType;
 };
 
-const NavBtnBg = ({ btn }: NavBtnProps) => {
+const AsideBtnBg = ({ btn }: AsideBtnProps) => {
     const { title, url } = btn;
 
     const useLink = () => {
@@ -24,10 +24,10 @@ const NavBtnBg = ({ btn }: NavBtnProps) => {
     };
 
     return (
-        <div css={NavBtnStyle} onClick={useLink}>
+        <div css={AsideBtnStyle} onClick={useLink}>
             {title}
         </div>
     );
 };
 
-export default NavBtnBg;
+export default AsideBtnBg;
