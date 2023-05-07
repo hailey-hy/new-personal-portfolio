@@ -2,8 +2,8 @@
 import { useState } from 'react';
 import { css } from '@emotion/react';
 import Background from 'components/background/Background';
-import IntroTitle from 'components/intro-text/IntroText';
 import IntroContainer from 'components/intro-text/IntroContainer';
+import HeaderContainer from 'components/header/HeaderContainer';
 
 const IntroStyle = css({
     width: '100vw',
@@ -16,6 +16,7 @@ const Intro = () => {
     return (
         <div css={IntroStyle}>
             <Background></Background>
+            <HeaderContainer></HeaderContainer>
             <IntroContainer></IntroContainer>
         </div>
     );

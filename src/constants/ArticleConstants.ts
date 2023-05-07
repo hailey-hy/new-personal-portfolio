@@ -13,12 +13,12 @@ export const Project = [
             {
                 index: 0,
                 children:
-                    '화면을 구성하는 UI를 Component로 나누어 재사용할 수 있어, 개발 상 효율성이 높아 선택하였습니다.',
+                    'UI를 Component로 나누어 재사용할 수 있고, 적은 수의 호출로 화면을 구성할 수 있어 개발 상 효율성이 높아 선택하였습니다.',
             },
             {
                 index: 1,
                 children:
-                    '상태 관리를 전역에서 할 수 있어 과도한 props drilling에 따른 이슈를 방지할 수 있어 선택하였습니다.',
+                    '상태 관리를 전역에서 할 수 있어, 과도한 props drilling에 따른 이슈를 방지할 수 있어 선택하였습니다.',
             },
             {
                 index: 2,
@@ -38,7 +38,7 @@ export const Project = [
             {
                 index: 0,
                 children:
-                    '화면을 구성하는 UI를 Component로 나누어 재사용할 수 있어, 개발 상 효율성이 높아 선택하였습니다.',
+                    'UI를 Component로 나누어 재사용할 수 있고, 적은 수의 호출로 화면을 구성할 수 있어 개발 상 효율성이 높아 선택하였습니다.',
             },
             {
                 index: 1,
@@ -51,7 +51,7 @@ export const Project = [
                     'CSS-in-JS 라이브러리 중 하나로, 불필요한 클래스 명명을 줄일 수 있어 선택하였습니다.',
             },
         ],
-        tabLables: ['리액트', '타입스크립트', 'Emotion'],
+        tabLables: ['리액트', '타입스크립트', 'Emotion(CSS-in-JS)'],
     },
 ];
 
