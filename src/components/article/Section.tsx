@@ -7,6 +7,7 @@ import { sectionType } from 'pages/Main';
 import { Project } from 'constants/ArticleConstants';
 import { Activity } from 'constants/ArticleConstants';
 import { BACKGROUND } from 'styles/Colors';
+import { TabPanelProps } from 'components/tabs/SkillsTab';
 
 const sectionStyle = css({
     display: 'flex',
@@ -29,6 +30,8 @@ export interface ArticlePropsType {
     term: string;
     group: string;
     detail: string[];
+    tabContents?: TabPanelProps[];
+    tabLables?: string[];
 }
 
 const Section = ({ sectionProps }: SectionPropsType) => {
