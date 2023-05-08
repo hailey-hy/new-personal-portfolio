@@ -26,6 +26,7 @@ export interface SectionPropsType {
 
 export interface ArticlePropsType {
     title: string;
+    githubUrl?: string;
     subtitle: string;
     term: string;
     group: string;
