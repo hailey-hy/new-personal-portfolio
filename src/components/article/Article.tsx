@@ -4,7 +4,7 @@ import ArticleDetail from './ArticleDetail';
 import { ArticlePropsType } from './Section';
 import { useEffect, useState } from 'react';
 import SkillsTab from 'components/tabs/SkillsTab';
-import { TabPanelProps } from 'components/tabs/SkillsTab';
+import ArticleGithubUrl from './ArticleGithubUrl';
 
 const articleStyle = css({
     display: 'flex',
@@ -17,24 +17,50 @@ const articleStyle = css({
     },
 });
 
+const spanRowStyle = css({
+    display: 'flex',
+    flexDirection: 'row',
+    gap: '1rem',
+});
+
 interface ArticlePropType {
     articleProp: ArticlePropsType;
 }
 
 const Article = ({ articleProp }: ArticlePropType) => {
-    const { title, subtitle, term, group, detail, tabContents, tabLables } =
-        articleProp;
+    const {
+        title,
+        githubUrl,
+        subtitle,
+        term,
+        group,
+        detail,
+        tabContents,
+        tabLables,
+    } = articleProp;
+
+    const [urlProps, setUrlProps] = useState<string>();
+    useEffect(() => {
+        setUrlProps(githubUrl);
+    }, [githubUrl]);
+
     const [detailProps, setDetailProps] = useState<string[]>([]);
     useEffect(() => {
         setDetailProps(detail);
     }, [title]);
 
-    if (tabContents == undefined || tabLables == undefined) {
+    if (
+        tabContents == undefined ||
+        tabLables == undefined ||
+        githubUrl == undefined
+    ) {
         return (
             <article css={articleStyle}>
                 <span>
                     <h4>{group}</h4>
-                    <h2>{title}</h2>
+                    <span css={spanRowStyle}>
+                        <h2>{title}</h2>
+                    </span>
                     <h4>{term}</h4>
                     <h4>{subtitle}</h4>
                 </span>
@@ -49,7 +75,10 @@ const Article = ({ articleProp }: ArticlePropType) => {
             <article css={articleStyle}>
                 <span>
                     <h4>{group}</h4>
-                    <h2>{title}</h2>
+                    <span css={spanRowStyle}>
+                        <h2>{title}</h2>
+                        <ArticleGithubUrl githubUrl={githubUrl} title={title} />
+                    </span>
                     <h4>{term}</h4>
                     <h4>{subtitle}</h4>
                 </span>

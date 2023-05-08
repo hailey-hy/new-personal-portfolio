@@ -1,6 +1,7 @@
 export const Project = [
     {
         title: '개발 정원',
+        githubUrl: 'https://github.com/hailey-hy/devroadmap-front',
         subtitle: '예비 개발자를 위한 개발 공부 다이어리 & 기록 공유 웹 서비스',
         term: '2022.06 ~ 08, 2023.04 ~',
         group: '팀 프로젝트',
@@ -25,15 +26,22 @@ export const Project = [
                 children:
                     'SPA인 리액트에서 페이지 이동을 가능하게 해주는 라이브러리입니다.',
             },
+            {
+                index: 3,
+                children: '네트워크 요청을 모듈화하였습니다.',
+            },
         ],
-        tabLables: ['리액트', 'redux-toolkit', 'react-router-dom'],
+        tabLables: ['리액트', 'redux-toolkit', 'react-router-dom', 'Axios'],
     },
     {
-        title: '포트폴리오 페이지 (현재 페이지)',
-        subtitle: '개인 포트폴리오로 활용할 웹페이지',
+        title: '포트폴리오 페이지',
+        githubUrl: 'https://github.com/hailey-hy/new-personal-portfolio',
+        subtitle: '개인 포트폴리오로 활용할 웹페이지 (현재 페이지)',
         term: '2023.04',
         group: '개인 프로젝트',
-        detail: ['타입스크립트를 활용'],
+        detail: [
+            'git commit message와 github pull request, issue 기능을 활용해 작업 내용을 정리하며 기록',
+        ],
         tabContents: [
             {
                 index: 0,
