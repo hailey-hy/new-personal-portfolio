@@ -15,18 +15,11 @@ const mainSectionStyle = css({
     flexDirection: 'column',
 });
 
-export interface sectionType {
-    type: string;
+export interface SectionPropsType {
+    ref: React.MutableRefObject<HTMLDivElement>;
 }
 
 const Main = () => {
-    const [projectProps, setProjectProps] = useState<sectionType>({
-        type: 'PROJECT',
-    });
-    const [articleProps, setArticleProps] = useState<sectionType>({
-        type: 'ACTIVITY',
-    });
-
     const onProjectClick = () => {
         projectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -45,11 +38,8 @@ const Main = () => {
                 onActivityClick={onActivityClick}
             ></Aside> */}
             <section css={mainSectionStyle}>
-                <Project sectionProps={projectProps} ref={projectRef}></Project>
-                <Activity
-                    sectionProps={articleProps}
-                    ref={activityRef}
-                ></Activity>
+                <Project ref={projectRef}></Project>
+                <Activity ref={activityRef}></Activity>
             </section>
         </div>
     );

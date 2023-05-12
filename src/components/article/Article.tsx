@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import ArticleDetail from './ArticleDetail';
-import { ArticlePropsType } from '../section/Activity';
 import { useEffect, useState } from 'react';
 import SkillsTab from 'components/tabs/SkillsTab';
 import ArticleGithubUrl from './ArticleGithubUrl';
+import { TabPanelProps } from 'components/tabs/SkillsTab';
 
 const articleStyle = css({
     display: 'flex',
@@ -22,6 +22,17 @@ const spanRowStyle = css({
     flexDirection: 'row',
     gap: '1rem',
 });
+
+export interface ArticlePropsType {
+    title: string;
+    githubUrl?: string;
+    subtitle: string;
+    term: string;
+    group: string;
+    detail: string[];
+    tabContents?: TabPanelProps[];
+    tabLables?: string[];
+}
 
 interface ArticlePropType {
     articleProp: ArticlePropsType;
