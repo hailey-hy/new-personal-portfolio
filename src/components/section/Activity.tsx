@@ -7,8 +7,6 @@ import { sectionType } from 'pages/Main';
 import { ACTIVITY } from 'constants/ArticleConstants';
 import { BACKGROUND } from 'styles/Colors';
 import { TabPanelProps } from 'components/tabs/SkillsTab';
-import { useRecoilState } from 'recoil';
-import { activityState } from 'recoil/atoms/navState';
 
 const sectionStyle = css({
     display: 'flex',
