@@ -1,4 +1,44 @@
-export const Project = [
+export const PROJECT = [
+    {
+        title: '포트폴리오 페이지',
+        githubUrl: 'https://github.com/hailey-hy/new-personal-portfolio',
+        subtitle: '개인 포트폴리오로 활용할 웹페이지 (현재 페이지)',
+        term: '2023.04',
+        group: '개인 프로젝트',
+        detail: [
+            'React Component, Custom Hooks를 활용해 재사용성이 높은 코드를 작성',
+            'github PR, issue 기능을 활용해 작업 내용을 체계적으로 기록',
+            '시멘틱 태그 등의 웹 표준 준수',
+        ],
+        tabContents: [
+            {
+                index: 0,
+                children:
+                    'UI를 Component로 나누어 재사용할 수 있고, 적은 수의 호출로 화면을 구성할 수 있어 개발 상 효율성이 높아 선택하였습니다.',
+            },
+            {
+                index: 1,
+                children:
+                    '함수나 객체 안에 들어갈 인자와 프로퍼티의 타입을 추론할 수 있고, 에러를 미리 체크할 수 있습니다. 개발 시 예상치 못한 타입 관련 버그를 방지할 수 있어 선택하였습니다.',
+            },
+            {
+                index: 2,
+                children:
+                    'CSS-in-JS 라이브러리 중 하나이므로 불필요한 클래스 명명을 줄일 수 있고, 타 CSS-in-JS 라이브러리 대비 성능이 빠르고 가벼워 선택하였습니다.',
+            },
+            {
+                index: 3,
+                children:
+                    '정해둔 코드 컨벤션에 따라 자동으로 코드를 수정할 수 있어, 일관된 코드 양식을 유지할 수 있어 사용하였습니다.',
+            },
+        ],
+        tabLables: [
+            '리액트',
+            '타입스크립트',
+            'Emotion(CSS-in-JS)',
+            'Eslint & Prettier',
+        ],
+    },
     {
         title: '개발 정원',
         githubUrl: 'https://github.com/hailey-hy/devroadmap-front',
@@ -24,46 +64,19 @@ export const Project = [
             {
                 index: 2,
                 children:
-                    'SPA인 리액트에서 페이지 이동을 가능하게 해주는 라이브러리입니다.',
+                    'SPA인 리액트에서 페이지 이동을 구현하고자 사용하였습니다.',
             },
             {
                 index: 3,
-                children: '네트워크 요청을 모듈화하였습니다.',
+                children:
+                    '인스턴스를 사용하여 네트워크 요청을 모듈화하였습니다.',
             },
         ],
         tabLables: ['리액트', 'redux-toolkit', 'react-router-dom', 'Axios'],
     },
-    {
-        title: '포트폴리오 페이지',
-        githubUrl: 'https://github.com/hailey-hy/new-personal-portfolio',
-        subtitle: '개인 포트폴리오로 활용할 웹페이지 (현재 페이지)',
-        term: '2023.04',
-        group: '개인 프로젝트',
-        detail: [
-            'git commit message와 github pull request, issue 기능을 활용해 작업 내용을 정리하며 기록',
-        ],
-        tabContents: [
-            {
-                index: 0,
-                children:
-                    'UI를 Component로 나누어 재사용할 수 있고, 적은 수의 호출로 화면을 구성할 수 있어 개발 상 효율성이 높아 선택하였습니다.',
-            },
-            {
-                index: 1,
-                children:
-                    '타입 에러를 미리 체크할 수 있으므로, 예상치 못한 타입 관련 버그를 방지할 수 있어 선택하였습니다.',
-            },
-            {
-                index: 2,
-                children:
-                    'CSS-in-JS 라이브러리 중 하나로, 불필요한 클래스 명명을 줄일 수 있어 선택하였습니다.',
-            },
-        ],
-        tabLables: ['리액트', '타입스크립트', 'Emotion(CSS-in-JS)'],
-    },
 ];
 
-export const Activity = [
+export const ACTIVITY = [
     {
         title: 'CS 스터디',
         subtitle: '운영체제, 네트워크 등의 computer science 과목 스터디',
