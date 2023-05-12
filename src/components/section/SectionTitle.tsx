@@ -1,8 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { SectionPropsType } from './Activity';
 import { HIGHLITGHT } from 'styles/Colors';
-import { sectionType } from 'pages/Main';
 
 const sectionTitleStyle = css({
     position: 'relative',

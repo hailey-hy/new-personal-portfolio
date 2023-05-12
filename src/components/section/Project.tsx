@@ -3,10 +3,11 @@ import { useEffect, useState, forwardRef } from 'react';
 import { css } from '@emotion/react';
 import Article from 'components/article/Article';
 import SectionTitle from './SectionTitle';
-import { sectionType } from 'pages/Main';
+import { TYPE } from 'constants/SectionTypeConstants';
 import { PROJECT } from 'constants/ArticleConstants';
 import { BACKGROUND } from 'styles/Colors';
-import { TabPanelProps } from 'components/tabs/SkillsTab';
+import { SectionPropsType } from 'pages/Main';
+import { ArticlePropsType } from 'components/article/Article';
 
 const sectionStyle = css({
     display: 'flex',
@@ -19,31 +20,14 @@ const sectionStyle = css({
     paddingBottom: '0rem',
 });
 
-export interface SectionPropsType {
-    sectionProps: sectionType;
-    ref: React.MutableRefObject<HTMLDivElement>;
-}
-
-export interface ArticlePropsType {
-    title: string;
-    githubUrl?: string;
-    subtitle: string;
-    term: string;
-    group: string;
-    detail: string[];
-    tabContents?: TabPanelProps[];
-    tabLables?: string[];
-}
-
-const Project = forwardRef(({ sectionProps, ref }: SectionPropsType) => {
-    const { type } = sectionProps;
+const Project = forwardRef(({ ref }: SectionPropsType) => {
     const [articleProps, setArticleProps] = useState<ArticlePropsType[]>([]);
     useEffect(() => {
         setArticleProps(PROJECT);
-    }, [type]);
+    }, []);
     return (
         <section css={sectionStyle} ref={ref}>
-            <SectionTitle type={type}></SectionTitle>
+            <SectionTitle type={TYPE.PROJECT}></SectionTitle>
             {articleProps.map((articleProp) => (
                 <Article articleProp={articleProp} />
             ))}
