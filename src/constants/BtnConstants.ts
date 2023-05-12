@@ -10,20 +10,7 @@ const BtnContent = {
         },
     ],
 
-    Main: [
-        {
-            title: 'INTRO',
-            url: '/',
-        },
-        {
-            title: 'PROJECTS',
-            url: '/',
-        },
-        {
-            title: 'ACTIVITIES',
-            url: '/',
-        },
-    ],
+    Main: ['INTRO', 'PROJECTS', 'ACTIVITIES'],
 };
 
 export default BtnContent;
