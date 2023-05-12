@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { css } from '@emotion/react';
 import AsideBtnBg from './AsideBtnBg';
 import BtnContent from 'constants/BtnConstants';
@@ -24,16 +24,26 @@ export interface AsideBtnType {
     url: string;
 }
 
-const Aside = () => {
-    const [btnContent, setBtnContent] = useState<AsideBtnType[]>(
-        BtnContent.Main,
-    );
+interface AsidePropType {
+    onProjectClick: () => void;
+    onActivityClick: () => void;
+}
+
+const Aside = ({ onProjectClick, onActivityClick }: AsidePropType) => {
+    // const [btnContent, setBtnContent] = useState<AsideBtnType[]>(
+    //     BtnContent.Main,
+    // );
 
     return (
         <aside css={AsideStyle}>
-            {btnContent.map((btn) => (
-                <AsideBtnBg btn={btn} />
-            ))}
+            <AsideBtnBg
+                btn={BtnContent.Main[1]}
+                event={onProjectClick}
+            ></AsideBtnBg>
+            <AsideBtnBg
+                btn={BtnContent.Main[2]}
+                event={onActivityClick}
+            ></AsideBtnBg>
         </aside>
     );
 };

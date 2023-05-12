@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import { AsideBtnType } from './Aside';
 import { HIGHLITGHT } from 'styles/Colors';
+import { useRef } from 'react';
 
 const AsideBtnStyle = css({
     fontSize: 18,
@@ -13,19 +14,14 @@ const AsideBtnStyle = css({
 });
 
 type AsideBtnProps = {
-    btn: AsideBtnType;
+    btn: string;
+    event: () => void;
 };
 
-const AsideBtnBg = ({ btn }: AsideBtnProps) => {
-    const { title, url } = btn;
-
-    const useLink = () => {
-        window.open(url);
-    };
-
+const AsideBtnBg = ({ btn, event }: AsideBtnProps) => {
     return (
-        <div css={AsideBtnStyle} onClick={useLink}>
-            {title}
+        <div css={AsideBtnStyle} onClick={event}>
+            {btn}
         </div>
     );
 };
