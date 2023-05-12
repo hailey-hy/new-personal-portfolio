@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { SectionPropsType } from './Section';
+import { SectionPropsType } from './Activity';
 import { HIGHLITGHT } from 'styles/Colors';
+import { sectionType } from 'pages/Main';
 
 const sectionTitleStyle = css({
     position: 'relative',
@@ -12,8 +13,11 @@ const sectionTitleStyle = css({
     marginBottom: '4rem',
 });
 
-const SectionTitle = ({ sectionProps }: SectionPropsType) => {
-    const { type } = sectionProps;
+interface typeType {
+    type: string;
+}
+
+const SectionTitle = ({ type }: typeType) => {
     return <h1 css={sectionTitleStyle}>{type}</h1>;
 };
 
