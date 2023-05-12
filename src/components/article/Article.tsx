@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
 import ArticleDetail from './ArticleDetail';
-import { ArticlePropsType } from './Section';
+import { ArticlePropsType } from '../section/Activity';
 import { useEffect, useState } from 'react';
 import SkillsTab from 'components/tabs/SkillsTab';
 import ArticleGithubUrl from './ArticleGithubUrl';
