@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { css } from '@emotion/react';
-import Nav from 'components/aside/Aside';
-import Section from 'components/article/Section';
+import Aside from 'components/aside/Aside';
+import Project from 'components/section/Project';
+import Activity from 'components/section/Activity';
 
 const mainStyle = css({
     display: 'flex',
@@ -25,12 +26,30 @@ const Main = () => {
     const [articleProps, setArticleProps] = useState<sectionType>({
         type: 'ACTIVITY',
     });
+
+    const onProjectClick = () => {
+        projectRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const onActivityClick = () => {
+        activityRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+    const projectRef = useRef<HTMLDivElement>(null);
+    const activityRef = useRef<HTMLDivElement>(null);
+
     return (
         <div css={mainStyle}>
-            <Nav></Nav>
+            {/* <Aside
+                onProjectClick={onProjectClick}
+                onActivityClick={onActivityClick}
+            ></Aside> */}
             <section css={mainSectionStyle}>
-                <Section sectionProps={projectProps}></Section>
-                <Section sectionProps={articleProps}></Section>
+                <Project sectionProps={projectProps} ref={projectRef}></Project>
+                <Activity
+                    sectionProps={articleProps}
+                    ref={activityRef}
+                ></Activity>
             </section>
         </div>
     );
