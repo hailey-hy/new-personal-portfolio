@@ -24,7 +24,7 @@ const HeaderButtons = ({ prop }: buttonType) => {
     }, [title, url]);
 
     return (
-        <div className={title}>
+        <div id={title}>
             <Button variant='text' size='large' css={buttonStyle}>
                 {title}
             </Button>
