@@ -59,7 +59,7 @@ const SkillsTab = ({ tabContents, tabLables }: tabPropsType) => {
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '80%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs
                     value={value}
