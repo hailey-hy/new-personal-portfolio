@@ -1,6 +1,7 @@
 export const PROJECT = [
     {
         title: '포트폴리오 페이지',
+        url: 'https://haeyeon-portfolio.netlify.app/',
         githubUrl: 'https://github.com/hailey-hy/new-personal-portfolio',
         subtitle: '개인 포트폴리오로 활용할 웹페이지 (현재 페이지)',
         term: '2023.04',
@@ -41,6 +42,7 @@ export const PROJECT = [
     },
     {
         title: '개발 정원',
+        url: 'https://devroadmap.netlify.app/signin',
         githubUrl: 'https://github.com/hailey-hy/devroadmap-front',
         subtitle: '예비 개발자를 위한 개발 공부 다이어리 & 기록 공유 웹 서비스',
         term: '2022.06 ~ 08, 2023.04 ~',
@@ -79,6 +81,7 @@ export const PROJECT = [
 export const ACTIVITY = [
     {
         title: 'CS 스터디',
+        url: 'https://www.notion.so/CS-6d0707eb635a44128ebdc9024d0a8f24',
         subtitle: '운영체제, 네트워크 등의 computer science 과목 스터디',
         term: '2021.12 ~ 2022.05',
         group: '그룹 스터디',
@@ -88,6 +91,7 @@ export const ACTIVITY = [
     },
     {
         title: '알고리즘 문제 해결 스터디',
+        url: 'https://github.com/hailey-hy/Problem-Solving',
         subtitle: '백준 및 프로그래머스 알고리즘 문제 풀이 스터디',
         term: '2021.10 ~ 진행중',
         group: '개인 스터디',

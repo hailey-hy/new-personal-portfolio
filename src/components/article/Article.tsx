@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import SkillsTab from 'components/tabs/SkillsTab';
 import ArticleGithubUrl from './ArticleGithubUrl';
 import { TabPanelProps } from 'components/tabs/SkillsTab';
+import ArticleTitleUrl from './ArticleTitleUrl';
 
 const articleStyle = css({
     display: 'flex',
@@ -21,10 +22,12 @@ const spanRowStyle = css({
     display: 'flex',
     flexDirection: 'row',
     gap: '1rem',
+    alignItems: 'center',
 });
 
 export interface ArticlePropsType {
     title: string;
+    url: string;
     githubUrl?: string;
     subtitle: string;
     term: string;
@@ -41,6 +44,7 @@ interface ArticlePropType {
 const Article = ({ articleProp }: ArticlePropType) => {
     const {
         title,
+        url,
         githubUrl,
         subtitle,
         term,
@@ -70,7 +74,7 @@ const Article = ({ articleProp }: ArticlePropType) => {
                 <span>
                     <h4>{group}</h4>
                     <span css={spanRowStyle}>
-                        <h2>{title}</h2>
+                        <ArticleTitleUrl title={title} url={url} />
                     </span>
                     <h4>{term}</h4>
                     <h4>{subtitle}</h4>
@@ -87,7 +91,7 @@ const Article = ({ articleProp }: ArticlePropType) => {
                 <span>
                     <h4>{group}</h4>
                     <span css={spanRowStyle}>
-                        <h2>{title}</h2>
+                        <ArticleTitleUrl title={title} url={url} />
                         <ArticleGithubUrl githubUrl={githubUrl} title={title} />
                     </span>
                     <h4>{term}</h4>
