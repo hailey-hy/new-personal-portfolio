@@ -1,29 +1,11 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import ArticleDetail from './ArticleDetail';
 import { useEffect, useState } from 'react';
 import SkillsTab from 'components/tabs/SkillsTab';
 import ArticleGithubUrl from './ArticleGithubUrl';
 import { TabPanelProps } from 'components/tabs/SkillsTab';
 import ArticleTitleUrl from './ArticleTitleUrl';
-
-const articleStyle = css({
-    display: 'flex',
-    flexDirection: 'column',
-    rowGap: '25px',
-    marginBottom: '5rem',
-
-    span: {
-        lineHeight: '2.5rem',
-    },
-});
-
-const spanRowStyle = css({
-    display: 'flex',
-    flexDirection: 'row',
-    gap: '1rem',
-    alignItems: 'center',
-});
+import { articleStyle, spanRowStyle } from './Style';
 
 export interface ArticlePropsType {
     title: string;
@@ -53,11 +35,6 @@ const Article = ({ articleProp }: ArticlePropType) => {
         tabContents,
         tabLables,
     } = articleProp;
-
-    const [urlProps, setUrlProps] = useState<string>();
-    useEffect(() => {
-        setUrlProps(githubUrl);
-    }, [githubUrl]);
 
     const [detailProps, setDetailProps] = useState<string[]>([]);
     useEffect(() => {

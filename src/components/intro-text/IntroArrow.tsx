@@ -1,15 +1,12 @@
 /** @jsxImportSource @emotion/react */
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { css, keyframes } from '@emotion/react';
-import { bouncing } from 'styles/Animations';
+import { introArrowStyle } from './Style';
 
 const IntroArrow = () => {
     return (
         <ArrowDropDownIcon
             fontSize='large'
-            css={css`
-                animation: ${bouncing} 1s ease infinite;
-            `}
+            css={introArrowStyle}
         ></ArrowDropDownIcon>
     );
 };

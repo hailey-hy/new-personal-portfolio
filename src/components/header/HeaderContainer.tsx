@@ -1,19 +1,8 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { headerContainerStyle } from './Style';
 import HeaderButtons from './HeaderButtons';
 import BtnContent from 'constants/BtnConstants';
 import { useEffect, useState } from 'react';
-
-const HeaderContainerStyle = css({
-    display: 'flex',
-    position: 'absolute',
-    height: '3rem',
-    width: '100vw',
-    gap: '2rem',
-    padding: '2rem',
-    alignItems: 'center',
-    zIndex: 100,
-});
 
 export interface headerButtonsType {
     title: string;
@@ -29,7 +18,7 @@ const HeaderContainer = () => {
     });
 
     return (
-        <nav css={HeaderContainerStyle}>
+        <nav css={headerContainerStyle}>
             {headerButtonsProps.map((prop) => (
                 <HeaderButtons prop={prop} />
             ))}

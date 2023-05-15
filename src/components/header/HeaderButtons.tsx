@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import Button from '@mui/material/Button';
+import { buttonStyle } from './Style';
 import { headerButtonsType } from './HeaderContainer';
 import { useLinkToPage } from 'hooks/useLinkToPage';
 import { useEffect } from 'react';
@@ -8,14 +8,6 @@ import { useEffect } from 'react';
 interface buttonType {
     prop: headerButtonsType;
 }
-
-const buttonStyle = css({
-    color: 'white',
-    ':hover': {
-        background: 'rgba(255, 255, 255, 0.3)',
-    },
-    borderRadius: '10rem',
-});
 
 const HeaderButtons = ({ prop }: buttonType) => {
     const { title, url } = prop;
