@@ -54,11 +54,6 @@ const Article = ({ articleProp }: ArticlePropType) => {
         tabLables,
     } = articleProp;
 
-    const [urlProps, setUrlProps] = useState<string>();
-    useEffect(() => {
-        setUrlProps(githubUrl);
-    }, [githubUrl]);
-
     const [detailProps, setDetailProps] = useState<string[]>([]);
     useEffect(() => {
         setDetailProps(detail);
