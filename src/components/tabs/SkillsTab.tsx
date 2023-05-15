@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import { textStyle } from './Style';
 
 export interface TabPanelProps {
     children: string;
@@ -20,10 +20,6 @@ interface tabPropsType {
     tabContents: TabPanelProps[];
     tabLables: string[];
 }
-
-const textStyle = css({
-    fontFamily: 'S-CoreDream-3Light',
-});
 
 const TabPanel = ({ content, value }: TabPanelContentProps) => {
     const { children, index } = content;
