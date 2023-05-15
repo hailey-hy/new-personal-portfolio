@@ -1,15 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-import { HIGHLITGHT } from 'styles/Colors';
-
-const sectionTitleStyle = css({
-    position: 'relative',
-    fontSize: '35px',
-    fontWeight: '700',
-    borderLeft: `solid ${HIGHLITGHT} 10px`,
-    paddingLeft: '1rem',
-    marginBottom: '4rem',
-});
+import { sectionTitleStyle } from './Style';
 
 interface typeType {
     type: string;
