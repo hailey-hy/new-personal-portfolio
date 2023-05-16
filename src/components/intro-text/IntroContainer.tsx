@@ -5,10 +5,10 @@ import IntroArrow from './IntroArrow';
 
 const IntroContainer = () => {
     return (
-        <div css={introContainerStyle}>
+        <section css={introContainerStyle}>
             <IntroText></IntroText>
             <IntroArrow></IntroArrow>
-        </div>
+        </section>
     );
 };
 

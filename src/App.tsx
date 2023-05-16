@@ -7,10 +7,10 @@ import { RecoilRoot } from 'recoil';
 function App() {
     return (
         <RecoilRoot>
-            <div className='App' css={Default}>
+            <main className='App' css={Default}>
                 <Intro></Intro>
                 <Main></Main>
-            </div>
+            </main>
         </RecoilRoot>
     );
 }

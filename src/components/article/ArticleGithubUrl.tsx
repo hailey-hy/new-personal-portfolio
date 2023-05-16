@@ -17,11 +17,9 @@ const ArticleGithubUrl = ({ githubUrl, title }: githubUrlType) => {
         useLinkToPage(buttonTitle, githubUrl);
     }, [buttonTitle, githubUrl]);
     return (
-        <div id={buttonTitle} css={gitUrlStyle}>
-            <IconButton>
-                <GitHubIcon />
-            </IconButton>
-        </div>
+        <IconButton id={buttonTitle} css={gitUrlStyle}>
+            <GitHubIcon />
+        </IconButton>
     );
 };
 

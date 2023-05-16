@@ -4,9 +4,9 @@ import { backgroundStyle } from './Style';
 
 const Background = () => {
     return (
-        <div css={backgroundStyle}>
+        <section css={backgroundStyle}>
             <BackgroundImg></BackgroundImg>
-        </div>
+        </section>
     );
 };
 
