@@ -6,7 +6,7 @@ import { HIGHLITGHT } from 'styles/Colors';
 const sectionStyle = css({
     display: 'flex',
     height: 'fit-content',
-    width: '100vw',
+    width: '80vw',
     backgroundColor: `${BACKGROUND}`,
     position: 'relative',
     flexDirection: 'column',
