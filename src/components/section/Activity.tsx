@@ -8,7 +8,7 @@ import { ACTIVITY } from 'constants/ArticleConstants';
 import { ArticlePropsType } from 'components/article/Article';
 import { SectionPropsType } from 'pages/Main';
 
-const Activity = forwardRef(({ ref }: SectionPropsType) => {
+const Activity = forwardRef<HTMLDivElement, SectionPropsType>((props, ref) => {
     const [articleProps, setArticleProps] = useState<ArticlePropsType[]>([]);
     useEffect(() => {
         setArticleProps(ACTIVITY);
