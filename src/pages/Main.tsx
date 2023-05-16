@@ -9,6 +9,7 @@ const mainStyle = css({
     display: 'flex',
     flexDirection: 'row',
     width: '100vw',
+    boxSizing: 'border-box',
 });
 
 const mainSectionStyle = css({
@@ -33,7 +34,7 @@ const Main = () => {
     };
 
     return (
-        <div css={mainStyle}>
+        <section css={mainStyle}>
             <Aside
                 onProjectClick={onProjectClick}
                 onActivityClick={onActivityClick}
@@ -42,7 +43,7 @@ const Main = () => {
                 <Project props={'props'} ref={projectRef}></Project>
                 <Activity props={'props'} ref={activityRef}></Activity>
             </section>
-        </div>
+        </section>
     );
 };
 

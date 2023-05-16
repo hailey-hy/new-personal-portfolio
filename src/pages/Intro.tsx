@@ -10,15 +10,16 @@ const IntroStyle = css({
     height: '100vh',
     display: 'flex',
     flexDirection: 'column',
+    boxSizing: 'border-box',
 });
 
 const Intro = () => {
     return (
-        <div css={IntroStyle}>
+        <section css={IntroStyle}>
             <Background></Background>
             <HeaderContainer></HeaderContainer>
             <IntroContainer></IntroContainer>
-        </div>
+        </section>
     );
 };
 

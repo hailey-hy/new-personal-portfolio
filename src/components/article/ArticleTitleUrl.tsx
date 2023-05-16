@@ -14,11 +14,9 @@ const ArticleTitleUrl = ({ title, url }: titleUrlType) => {
         useLinkToPage(title, url);
     }, [title, url]);
     return (
-        <div id={title}>
-            <Button variant='text' size='large' css={articleTitleStyle}>
-                {title}
-            </Button>
-        </div>
+        <Button id={title} variant='text' size='large' css={articleTitleStyle}>
+            {title}
+        </Button>
     );
 };
 
