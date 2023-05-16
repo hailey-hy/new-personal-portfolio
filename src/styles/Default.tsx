@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 const Default = css({
+    boxSizing: 'border-box',
     // 기본 폰트
     '@font-face': [
         {

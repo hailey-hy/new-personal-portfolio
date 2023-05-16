@@ -12,17 +12,23 @@ const asideBtnStyle = css({
     },
 });
 
+const asideContainerStyle = css({
+    display: 'flex',
+    position: 'relative',
+    flexDirection: 'column',
+    justifyContent: 'start',
+    margin: 'auto',
+    height: '60vh',
+    gap: '25px',
+    top: '85px',
+});
+
 const asideStyle = css({
     background: `${BACKGROUND}`,
     height: '100vh',
     width: '20vw',
-    padding: '100px 30px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    gap: '25px',
     position: 'sticky',
     top: '0px',
     bottom: '100vh',
 });
-export { asideBtnStyle, asideStyle };
+export { asideBtnStyle, asideStyle, asideContainerStyle };
