@@ -13,9 +13,8 @@ const headerContainerStyle = css({
     display: 'flex',
     position: 'absolute',
     height: '3rem',
-    width: '100vw',
     gap: '2rem',
-    padding: '2rem',
+    padding: '3rem',
     alignItems: 'center',
     zIndex: 100,
 });
