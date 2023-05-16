@@ -8,11 +8,12 @@ import { PROJECT } from 'constants/ArticleConstants';
 import { SectionPropsType } from 'pages/Main';
 import { ArticlePropsType } from 'components/article/Article';
 
-const Project = forwardRef(({ ref }: SectionPropsType) => {
+const Project = forwardRef<HTMLDivElement, SectionPropsType>((props, ref) => {
     const [articleProps, setArticleProps] = useState<ArticlePropsType[]>([]);
     useEffect(() => {
         setArticleProps(PROJECT);
     }, []);
+
     return (
         <section css={sectionStyle} ref={ref}>
             <SectionTitle type={TYPE.PROJECT}></SectionTitle>

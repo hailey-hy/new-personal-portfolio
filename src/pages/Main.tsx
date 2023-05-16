@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import { css } from '@emotion/react';
 import Aside from 'components/aside/Aside';
 import Project from 'components/section/Project';
@@ -8,6 +8,7 @@ import Activity from 'components/section/Activity';
 const mainStyle = css({
     display: 'flex',
     flexDirection: 'row',
+    width: '100vw',
 });
 
 const mainSectionStyle = css({
@@ -16,10 +17,13 @@ const mainSectionStyle = css({
 });
 
 export interface SectionPropsType {
-    ref: React.MutableRefObject<HTMLDivElement>;
+    props: any;
 }
 
 const Main = () => {
+    const projectRef = useRef<HTMLDivElement>(null);
+    const activityRef = useRef<HTMLDivElement>(null);
+
     const onProjectClick = () => {
         projectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -28,18 +32,15 @@ const Main = () => {
         activityRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
-    const projectRef = useRef<HTMLDivElement>(null);
-    const activityRef = useRef<HTMLDivElement>(null);
-
     return (
         <div css={mainStyle}>
-            {/* <Aside
+            <Aside
                 onProjectClick={onProjectClick}
                 onActivityClick={onActivityClick}
-            ></Aside> */}
+            ></Aside>
             <section css={mainSectionStyle}>
-                <Project ref={projectRef}></Project>
-                <Activity ref={activityRef}></Activity>
+                <Project props={'props'} ref={projectRef}></Project>
+                <Activity props={'props'} ref={activityRef}></Activity>
             </section>
         </div>
     );
