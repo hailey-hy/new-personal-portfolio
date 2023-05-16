@@ -1,7 +1,15 @@
 import { css } from '@emotion/react';
 
 const Default = css({
-    boxSizing: 'border-box',
+    '*': {
+        boxSizing: 'border-box',
+        '-moz-box-sizing': 'border-box',
+        '-webkit-box-sizing': 'border-box',
+        margin: 0,
+    },
+    body: {
+        overflowX: 'hidden',
+    },
     // 기본 폰트
     '@font-face': [
         {
