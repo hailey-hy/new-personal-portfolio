@@ -30,5 +30,6 @@ const asideStyle = css({
     position: 'sticky',
     top: '0px',
     bottom: '100vh',
+    padding: '2rem',
 });
 export { asideBtnStyle, asideStyle, asideContainerStyle };

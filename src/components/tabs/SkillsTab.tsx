@@ -55,8 +55,14 @@ const SkillsTab = ({ tabContents, tabLables }: tabPropsType) => {
     };
 
     return (
-        <Box sx={{ width: '80%' }}>
-            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box sx={{ width: '100%', boxSizing: 'border-box' }}>
+            <Box
+                sx={{
+                    borderBottom: 1,
+                    borderColor: 'divider',
+                    boxSizing: 'border-box',
+                }}
+            >
                 <Tabs
                     value={value}
                     onChange={handleChange}
