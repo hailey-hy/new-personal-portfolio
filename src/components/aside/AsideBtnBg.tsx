@@ -1,7 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { AsideBtnType } from './Aside';
 import { asideBtnStyle } from './Style';
-import { useRef } from 'react';
 
 type AsideBtnProps = {
     btn: string;
