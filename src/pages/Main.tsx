@@ -27,6 +27,10 @@ const Main = () => {
     const activityRef = useRef<HTMLDivElement>(null);
     const educationRef = useRef<HTMLDivElement>(null);
 
+    const onIntroClick = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const onProjectClick = () => {
         projectRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -39,13 +43,16 @@ const Main = () => {
         educationRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const onClickEvents = [
+        onIntroClick,
+        onProjectClick,
+        onActivityClick,
+        onEducationClick,
+    ];
+
     return (
         <section css={mainStyle}>
-            <Aside
-                onProjectClick={onProjectClick}
-                onActivityClick={onActivityClick}
-                onEducationClick={onEducationClick}
-            ></Aside>
+            <Aside onClickEvents={onClickEvents}></Aside>
             <section css={mainSectionStyle}>
                 <Project props={'props'} ref={projectRef}></Project>
                 <Activity props={'props'} ref={activityRef}></Activity>
