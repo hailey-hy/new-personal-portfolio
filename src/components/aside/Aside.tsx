@@ -9,31 +9,16 @@ export interface AsideBtnType {
 }
 
 interface AsidePropType {
-    onProjectClick: () => void;
-    onActivityClick: () => void;
-    onEducationClick: () => void;
+    onClickEvents: (() => void)[];
 }
 
-const Aside = ({
-    onProjectClick,
-    onActivityClick,
-    onEducationClick,
-}: AsidePropType) => {
+const Aside = ({ onClickEvents }: AsidePropType) => {
     return (
         <aside css={asideStyle}>
             <div css={asideContainerStyle}>
-                <AsideBtnBg
-                    btn={BtnContent.Main[1]}
-                    event={onProjectClick}
-                ></AsideBtnBg>
-                <AsideBtnBg
-                    btn={BtnContent.Main[2]}
-                    event={onActivityClick}
-                ></AsideBtnBg>
-                <AsideBtnBg
-                    btn={BtnContent.Main[3]}
-                    event={onEducationClick}
-                ></AsideBtnBg>
+                {onClickEvents.map((event, index) => (
+                    <AsideBtnBg btn={BtnContent.Main[index]} event={event} />
+                ))}
             </div>
         </aside>
     );
