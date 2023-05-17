@@ -101,3 +101,17 @@ export const ACTIVITY = [
         ],
     },
 ];
+
+export const EDUCATION = [
+    {
+        title: '우아한 테크코스 5기',
+        url: 'https://github.com/hailey-hy/javascript-baseball',
+        subtitle: '약 4주간 3개의 과제를 해결하는 프리코스 진행',
+        term: '2022.10 ~ 2022.11',
+        group: '교육',
+        detail: [
+            'git commit 컨벤션, 자바스크립트 컨벤션 학습',
+            '매주 피드백을 받으며 클린한 코드 작성을 연습',
+        ],
+    },
+];

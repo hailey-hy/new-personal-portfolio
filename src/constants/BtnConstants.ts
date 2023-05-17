@@ -10,7 +10,7 @@ const BtnContent = {
         },
     ],
 
-    Main: ['INTRO', 'PROJECTS', 'ACTIVITIES'],
+    Main: ['INTRO', 'PROJECTS', 'ACTIVITIES', 'EDUCATION'],
 };
 
 export default BtnContent;
