@@ -7,15 +7,16 @@ export const PROJECT = [
         term: '2023.04',
         group: '개인 프로젝트',
         detail: [
-            'React Component, Custom Hooks를 활용해 재사용성이 높은 코드를 작성',
             'github PR, issue 기능을 활용해 작업 내용을 체계적으로 기록',
-            '시멘틱 태그 등의 웹 표준 준수',
+            'React hooks, custom hooks를 활용한 기능 개발',
+            '이미지 최적화를 통한 성능 개선 및 크로스 브라우징 처리',
+            '시멘틱 태그 사용',
         ],
         tabContents: [
             {
                 index: 0,
                 children:
-                    'UI를 Component로 나누어 재사용할 수 있고, 적은 수의 호출로 화면을 구성할 수 있어 개발 상 효율성이 높아 선택하였습니다.',
+                    'UI를 Component로 나누어 재사용할 수 있어 선택하였습니다. 또한, 리액트에서 제공하는 hooks와 직접 작성하는 custom hooks를 활용하면 개발 효율성을 높일 수 있습니다.',
             },
             {
                 index: 1,
@@ -56,7 +57,7 @@ export const PROJECT = [
             {
                 index: 0,
                 children:
-                    'UI를 Component로 나누어 재사용할 수 있고, 적은 수의 호출로 화면을 구성할 수 있어 개발 상 효율성이 높아 선택하였습니다.',
+                    'UI를 Component로 나누어 재사용할 수 있어 선택하였습니다. 또한, 리액트에서 제공하는 hooks와 직접 작성하는 custom hooks를 활용하면 개발 효율성을 높일 수 있습니다.',
             },
             {
                 index: 1,
