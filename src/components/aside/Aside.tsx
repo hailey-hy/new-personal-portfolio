@@ -11,9 +11,14 @@ export interface AsideBtnType {
 interface AsidePropType {
     onProjectClick: () => void;
     onActivityClick: () => void;
+    onEducationClick: () => void;
 }
 
-const Aside = ({ onProjectClick, onActivityClick }: AsidePropType) => {
+const Aside = ({
+    onProjectClick,
+    onActivityClick,
+    onEducationClick,
+}: AsidePropType) => {
     return (
         <aside css={asideStyle}>
             <div css={asideContainerStyle}>
@@ -24,6 +29,10 @@ const Aside = ({ onProjectClick, onActivityClick }: AsidePropType) => {
                 <AsideBtnBg
                     btn={BtnContent.Main[2]}
                     event={onActivityClick}
+                ></AsideBtnBg>
+                <AsideBtnBg
+                    btn={BtnContent.Main[3]}
+                    event={onEducationClick}
                 ></AsideBtnBg>
             </div>
         </aside>

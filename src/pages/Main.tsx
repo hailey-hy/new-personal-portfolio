@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import Aside from 'components/aside/Aside';
 import Project from 'components/section/Project';
 import Activity from 'components/section/Activity';
+import Education from 'components/section/Education';
 
 const mainStyle = css({
     display: 'flex',
@@ -24,6 +25,7 @@ export interface SectionPropsType {
 const Main = () => {
     const projectRef = useRef<HTMLDivElement>(null);
     const activityRef = useRef<HTMLDivElement>(null);
+    const educationRef = useRef<HTMLDivElement>(null);
 
     const onProjectClick = () => {
         projectRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -33,15 +35,21 @@ const Main = () => {
         activityRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
 
+    const onEducationClick = () => {
+        educationRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <section css={mainStyle}>
             <Aside
                 onProjectClick={onProjectClick}
                 onActivityClick={onActivityClick}
+                onEducationClick={onEducationClick}
             ></Aside>
             <section css={mainSectionStyle}>
                 <Project props={'props'} ref={projectRef}></Project>
                 <Activity props={'props'} ref={activityRef}></Activity>
+                <Education props={'props'} ref={educationRef}></Education>
             </section>
         </section>
     );
