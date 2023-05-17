@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { useEffect, useState, forwardRef } from 'react';
+import { css } from '@emotion/react';
 import { sectionStyle } from './Style';
 import Article from 'components/article/Article';
 import SectionTitle from './SectionTitle';
