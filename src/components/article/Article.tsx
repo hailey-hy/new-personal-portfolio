@@ -6,6 +6,7 @@ import ArticleGithubUrl from './ArticleGithubUrl';
 import { TabPanelProps } from 'components/tabs/SkillsTab';
 import ArticleTitleUrl from './ArticleTitleUrl';
 import { articleStyle, spanRowStyle } from './Style';
+import ArticleTitleContainer from './ArticleTitleContainer';
 
 export interface ArticlePropsType {
     title: string;
@@ -50,9 +51,9 @@ const Article = ({ articleProp }: ArticlePropType) => {
             <article css={articleStyle}>
                 <span>
                     <h4>{group}</h4>
-                    <span css={spanRowStyle}>
+                    <ArticleTitleContainer>
                         <ArticleTitleUrl title={title} url={url} />
-                    </span>
+                    </ArticleTitleContainer>
                     <h4>{term}</h4>
                     <h4>{subtitle}</h4>
                 </span>
@@ -67,10 +68,10 @@ const Article = ({ articleProp }: ArticlePropType) => {
             <article css={articleStyle}>
                 <span>
                     <h4>{group}</h4>
-                    <span css={spanRowStyle}>
+                    <ArticleTitleContainer>
                         <ArticleTitleUrl title={title} url={url} />
                         <ArticleGithubUrl githubUrl={githubUrl} title={title} />
-                    </span>
+                    </ArticleTitleContainer>
                     <h4>{term}</h4>
                     <h4>{subtitle}</h4>
                 </span>
