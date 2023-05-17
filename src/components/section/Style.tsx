@@ -6,12 +6,14 @@ import { HIGHLITGHT } from 'styles/Colors';
 const sectionStyle = css({
     display: 'flex',
     height: 'fit-content',
-    width: '80vw',
     backgroundColor: `${BACKGROUND}`,
     position: 'relative',
     flexDirection: 'column',
     padding: '5rem',
     paddingBottom: '0rem',
+    '@media (max-width: 425px)': {
+        padding: '3.2rem',
+    },
 });
 
 const sectionTitleStyle = css({
@@ -21,6 +23,10 @@ const sectionTitleStyle = css({
     borderLeft: `solid ${HIGHLITGHT} 10px`,
     paddingLeft: '1rem',
     marginBottom: '4rem',
+
+    '@media (max-width: 425px)': {
+        fontSize: '25px',
+    },
 });
 
 export { sectionStyle, sectionTitleStyle };

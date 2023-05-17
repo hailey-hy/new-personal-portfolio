@@ -5,6 +5,7 @@ import Aside from 'components/aside/Aside';
 import Project from 'components/section/Project';
 import Activity from 'components/section/Activity';
 import Education from 'components/section/Education';
+import { useMediaQuery } from '@mui/material';
 
 const mainStyle = css({
     display: 'flex',
@@ -16,6 +17,10 @@ const mainStyle = css({
 const mainSectionStyle = css({
     display: 'flex',
     flexDirection: 'column',
+    width: '80vw',
+    '@media (max-width: 750px)': {
+        width: '100vw',
+    },
 });
 
 export interface SectionPropsType {
@@ -50,9 +55,12 @@ const Main = () => {
         onEducationClick,
     ];
 
+    const match = useMediaQuery('(min-width:750px)');
+
     return (
         <section css={mainStyle}>
-            <Aside onClickEvents={onClickEvents}></Aside>
+            {match && <Aside onClickEvents={onClickEvents}></Aside>}
+
             <section css={mainSectionStyle}>
                 <Project props={'props'} ref={projectRef}></Project>
                 <Activity props={'props'} ref={activityRef}></Activity>

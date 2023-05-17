@@ -13,6 +13,16 @@ const articleStyle = css({
     span: {
         lineHeight: '2.5rem',
     },
+
+    '@media (max-width: 425px)': {
+        rowGap: '15px',
+        span: {
+            lineHeight: '1.5rem',
+        },
+        h4: {
+            fontSize: '15px',
+        },
+    },
 });
 
 const spanRowStyle = css({
@@ -27,6 +37,10 @@ const articleDetailStyle = css({
     display: 'flex',
     flexDirection: 'row',
     gap: '0.5rem',
+    '@media (max-width: 425px)': {
+        h3: { fontSize: '17px', lineHeight: '1.8rem' },
+        gap: '0.5rem',
+    },
 });
 
 const circleStyle = css({
@@ -49,6 +63,10 @@ const articleTitleStyle = css({
     color: BLACK,
     fontWeight: 600,
     borderRadius: '2rem',
+    '@media (max-width: 425px)': {
+        fontSize: '20px',
+        margin: '0.5rem 0 0.5rem 0',
+    },
 });
 
 export {

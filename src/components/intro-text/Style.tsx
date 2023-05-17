@@ -33,12 +33,21 @@ const introTitleStyle = css({
     '-webkit-box-align': 'center',
     alignItems: 'center',
     margin: '10px',
+    '@media (max-width: 425px)': {
+        p: { fontSize: '25px' },
+    },
 });
 
 const introBodyStyle = css({
     color: 'white',
     fontSize: 18,
     fontWeight: 600,
+    '@media (max-width: 425px)': {
+        p: { fontSize: '15px' },
+    },
+    '@media (max-width: 375px)': {
+        p: { fontSize: '13px' },
+    },
 });
 
 const introAnimationFrist = css({

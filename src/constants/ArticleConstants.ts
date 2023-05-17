@@ -33,12 +33,18 @@ export const PROJECT = [
                 children:
                     '정해둔 코드 컨벤션에 따라 자동으로 코드를 수정할 수 있어, 일관된 코드 양식을 유지할 수 있어 사용하였습니다.',
             },
+            {
+                index: 4,
+                children:
+                    'github을 기반으로 배포를 도와줍니다. 정해둔 branch에 새로운 push가 생기면 자동으로 배포를 시작하고, lighthouse로 성능 측정도 동시에 할 수 있어 선택하였습니다. ',
+            },
         ],
         tabLables: [
             '리액트',
             '타입스크립트',
             'Emotion(CSS-in-JS)',
             'Eslint & Prettier',
+            'Netlify',
         ],
     },
     {
