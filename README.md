@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+## Haeyeon Jeon Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-   [웹페이지 방문하기](https://haeyeon-portfolio.netlify.app/)
+-   [개발 회고 보러가기](https://velog.io/@hailey-hy/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EB%B0%9C-%ED%9A%8C%EA%B3%A0)
 
-## Available Scripts
+### 사용 기술
 
-In the project directory, you can run:
+-   Core: React, Typescript
+-   CSS-in-JS: Emotion
+-   Tool: Eslint, Prettier, Figma
+-   Deploy: Netilfy
 
-### `npm start`
+### 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. useRef, forwardRef를 이용한 스크롤 이동 이벤트 기능 https://github.com/hailey-hy/new-personal-portfolio/pull/35
+2. 성능 개선을 위한 이미지 최적화 https://github.com/hailey-hy/new-personal-portfolio/pull/41
+3. 모바일, 태블릿, 데스크탑을 호환하는 반응형 디자인 https://github.com/hailey-hy/new-personal-portfolio/pull/46
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 주요 이슈
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. 현재 컴포넌트 구조의 효율성 조사 https://github.com/hailey-hy/new-personal-portfolio/issues/33
+2. useRef로 참조한 DOM이 null이 되었을 때 https://github.com/hailey-hy/new-personal-portfolio/issues/34
+3. 유니온 타입 narrowing을 위한 옵셔널 체이닝 https://github.com/hailey-hy/new-personal-portfolio/issues/16
