@@ -1,6 +1,7 @@
 ## Haeyeon Jeon Portfolio
 
 <img src='https://github.com/hailey-hy/new-personal-portfolio/assets/93465128/d8b9f9e3-02ab-441c-bd8e-ec91c235dab3' width='500px'/>
+
 -   [웹페이지 방문하기](https://haeyeon-portfolio.netlify.app/)
 -   [개발 회고 보러가기](https://velog.io/@hailey-hy/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EB%B0%9C-%ED%9A%8C%EA%B3%A0)
 
