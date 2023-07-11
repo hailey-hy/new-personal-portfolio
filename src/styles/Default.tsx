@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { defaultFont } from './Fonts';
 
 const Default = css({
     '*': {
@@ -10,7 +11,7 @@ const Default = css({
     body: {
         overflowX: 'hidden',
     },
-    // 기본 폰트
+    
     '@font-face': [
         {
             'font-family': 'S-CoreDream-3Light',
@@ -18,8 +19,15 @@ const Default = css({
             'font-weight': 'normal',
             'font-style': 'normal',
         },
+        {
+            'font-family': 'NEXON Lv2 Gothic',
+            src: 'url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff")',
+            'font-weight': 'normal',
+            'font-style': 'normal',
+        }
     ],
-    fontFamily: 'S-CoreDream-3Light',
+
+    fontFamily: defaultFont,
 
     p: {
         position: 'relative',
@@ -42,6 +50,7 @@ const Default = css({
     h4: {
         //세부 설명
         fontWeight: '400',
+        fontSize: '18px'
     },
 
     // 미디어 쿼리
