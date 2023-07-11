@@ -2,6 +2,7 @@
 import { css } from '@emotion/react';
 import { HIGHLITGHT } from 'styles/Colors';
 import { BLACK } from 'styles/Colors';
+import { defaultFont } from 'styles/Fonts';
 
 // Article
 const articleStyle = css({
@@ -38,7 +39,7 @@ const articleDetailStyle = css({
     flexDirection: 'row',
     gap: '0.5rem',
     '@media (max-width: 425px)': {
-        h3: { fontSize: '17px', lineHeight: '1.8rem' },
+        h3: { fontSize: '17px', lineHeight: '1rem' },
         gap: '0.5rem',
     },
 });
@@ -46,7 +47,7 @@ const articleDetailStyle = css({
 const circleStyle = css({
     fontSize: '1rem',
     color: `${HIGHLITGHT}`,
-    marginTop: '0.4rem',
+    marginTop: '0.5rem',
 });
 
 // ArticleGithubUrl
@@ -59,7 +60,7 @@ const articleTitleStyle = css({
     fontSize: '25px',
     margin: '1rem 0 1rem 0',
     padding: '0.5rem 1rem 0.3rem 1rem',
-    fontFamily: 'S-CoreDream-3Light',
+    fontFamily: defaultFont,
     color: BLACK,
     fontWeight: 600,
     borderRadius: '2rem',
@@ -69,6 +70,18 @@ const articleTitleStyle = css({
     },
 });
 
+// ArticleDetailUrl
+const articleDetialUrlStyle = css({
+    fontFamily: defaultFont,
+    color: BLACK,
+    padding: 0
+})
+
+// ArticleDetailUrl
+const articleDetailClipStyle = css({
+    marginLeft: '0.5rem'
+})
+
 export {
     articleStyle,
     spanRowStyle,
@@ -76,4 +89,6 @@ export {
     circleStyle,
     gitUrlStyle,
     articleTitleStyle,
+    articleDetialUrlStyle,
+    articleDetailClipStyle
 };
