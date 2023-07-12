@@ -78,7 +78,8 @@ export const PROJECT = [
             },
             {
                 index: 4,
-                children: 'UI 라이브러리입니다.',
+                children:
+                    'UI 라이브러리입니다. 리액트와 호환성이 좋고, 커스터마이징해서 사용할 예정이 없어 선택하였습니다.',
             },
             {
                 index: 5,
