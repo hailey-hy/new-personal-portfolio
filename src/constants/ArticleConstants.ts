@@ -4,8 +4,9 @@ export const PROJECT = [
         url: 'https://devroadmap.netlify.app/signin',
         githubUrl: 'https://github.com/hailey-hy/devroadmap-front',
         subtitle: '예비 개발자를 위한 개발 공부 다이어리 & 기록 공유 웹 서비스',
-        term: '2022.06 ~ 08, 2023.04 ~',
+        term: '2022.06 ~ 08',
         group: '팀 프로젝트',
+        tool: 'Spring boot - React',
         detail: [
             'JWT token을 사용한 로그인',
             'axios 인스턴스를 통한 서버 통신',
@@ -36,7 +37,7 @@ export const PROJECT = [
         ],
         tabLables: ['React', 'redux-toolkit', 'react-router-dom', 'Axios'],
     },
-    
+
     {
         title: '포트폴리오 페이지',
         url: 'https://haeyeon-portfolio.netlify.app/',
@@ -44,15 +45,15 @@ export const PROJECT = [
         subtitle: '개인 포트폴리오로 활용할 웹 페이지 (현재 페이지)',
         term: '2023.04',
         group: '개인 프로젝트',
+        tool: 'React with typescript',
         detail: [
-            '디자인 시스템을 통한 레이아웃 재사용',
-            'css-in-js 라이브러리 emotion 사용',
-            'custom hooks를 활용',
+            '재사용 가능한 레이아웃, 컴포넌트 설계',
+            'custom hooks를 활용한 단일 책임',
             '타입스크립트 적용',
             '<https://github.com/hailey-hy/new-personal-portfolio/issues/37>이미지 최적화를 통한 성능 개선',
+            '<https://github.com/hailey-hy/new-personal-portfolio/pull/35>github PR, issue 기능을 활용한 작업 내용 기록',
+            'airbnb 코드 컨벤션 적용',
             'useRef를 이용한 DOM 접근',
-            '<https://github.com/hailey-hy/new-personal-portfolio/pull/35>github PR, issue 기능을 활용해 작업 내용을 체계적으로 기록',
-            'eslint, prettier 사용'
         ],
         tabContents: [
             {
@@ -78,6 +79,11 @@ export const PROJECT = [
             {
                 index: 4,
                 children:
+                    'UI 라이브러리입니다. 리액트와 호환성이 좋고, 커스터마이징해서 사용할 예정이 없어 선택하였습니다.',
+            },
+            {
+                index: 5,
+                children:
                     'github을 기반으로 배포를 도와줍니다. 정해둔 branch에 새로운 push가 생기면 자동으로 배포를 시작하고, lighthouse로 성능 측정도 동시에 할 수 있어 선택하였습니다. ',
             },
         ],
@@ -86,6 +92,7 @@ export const PROJECT = [
             'typescript',
             'Emotion(CSS-in-JS)',
             'Eslint & Prettier',
+            'Mui',
             'Netlify',
         ],
     },
@@ -96,9 +103,10 @@ export const PROJECT = [
         subtitle: '친구들의 특별한 날, 선물 준비를 도와주는 웹 서비스',
         term: '2023.06 ~ 개발중',
         group: '팀 프로젝트',
+        tool: 'Spring boot - Next with typescript',
         detail: [
             'Atomic 디자인 패턴 적용',
-            'storybook을 활용한 UI 컴포넌트 개발',
+            '<https://gift-checker-storybook.vercel.app/?path=/docs/design-systems-atoms-inputtext--docs>storybook을 활용한 UI 컴포넌트 개발',
             'Next.js 사용',
         ],
         tabContents: [
@@ -154,7 +162,6 @@ export const PROJECT = [
             'Vercel',
         ],
     },
-    
 ];
 
 export const ACTIVITY = [
@@ -174,9 +181,7 @@ export const ACTIVITY = [
         subtitle: '백준 및 프로그래머스 알고리즘 문제 풀이 스터디',
         term: '2021.10 ~ 진행중',
         group: '개인 스터디',
-        detail: [
-            '하루 한 문제 해결을 목표로 현재 약 400문제 해결',
-        ],
+        detail: ['하루 한 문제 해결을 목표로 현재 약 400문제 해결'],
     },
 ];
 
@@ -187,8 +192,6 @@ export const EDUCATION = [
         subtitle: '약 4주간 3개의 과제를 해결하는 프리코스 진행',
         term: '2022.10 ~ 2022.11',
         group: '교육',
-        detail: [
-            '한 달간 매주 자바스크립트 과제를 해결하고, 피드백 반영'
-        ],
+        detail: ['한 달간 매주 자바스크립트 과제를 해결하고, 피드백 반영'],
     },
 ];

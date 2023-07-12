@@ -7,6 +7,7 @@ import { TabPanelProps } from 'components/tabs/SkillsTab';
 import ArticleTitleUrl from './ArticleTitleUrl';
 import { articleStyle, spanRowStyle } from './Style';
 import ArticleTitleContainer from './ArticleTitleContainer';
+import Chip from '@mui/material/Chip';
 
 export interface ArticlePropsType {
     title: string;
@@ -15,6 +16,7 @@ export interface ArticlePropsType {
     subtitle: string;
     term: string;
     group: string;
+    tool?: string;
     detail: string[];
     tabContents?: TabPanelProps[];
     tabLables?: string[];
@@ -32,6 +34,7 @@ const Article = ({ articleProp }: ArticlePropType) => {
         subtitle,
         term,
         group,
+        tool,
         detail,
         tabContents,
         tabLables,
@@ -51,6 +54,7 @@ const Article = ({ articleProp }: ArticlePropType) => {
             <article css={articleStyle}>
                 <span>
                     <h4>{group}</h4>
+
                     <ArticleTitleContainer>
                         <ArticleTitleUrl title={title} url={url} />
                     </ArticleTitleContainer>
@@ -67,7 +71,10 @@ const Article = ({ articleProp }: ArticlePropType) => {
         return (
             <article css={articleStyle}>
                 <span>
-                    <h4>{group}</h4>
+                    <span css={spanRowStyle}>
+                        <h4>{group}</h4>
+                        <Chip label={tool} />
+                    </span>
                     <ArticleTitleContainer>
                         <ArticleTitleUrl title={title} url={url} />
                         <ArticleGithubUrl githubUrl={githubUrl} title={title} />
