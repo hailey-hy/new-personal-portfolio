@@ -36,7 +36,7 @@ export const PROJECT = [
         ],
         tabLables: ['React', 'redux-toolkit', 'react-router-dom', 'Axios'],
     },
-    
+
     {
         title: '포트폴리오 페이지',
         url: 'https://haeyeon-portfolio.netlify.app/',
@@ -52,7 +52,7 @@ export const PROJECT = [
             '<https://github.com/hailey-hy/new-personal-portfolio/issues/37>이미지 최적화를 통한 성능 개선',
             'useRef를 이용한 DOM 접근',
             '<https://github.com/hailey-hy/new-personal-portfolio/pull/35>github PR, issue 기능을 활용해 작업 내용을 체계적으로 기록',
-            'eslint, prettier 사용'
+            'eslint, prettier 사용',
         ],
         tabContents: [
             {
@@ -98,7 +98,7 @@ export const PROJECT = [
         group: '팀 프로젝트',
         detail: [
             'Atomic 디자인 패턴 적용',
-            'storybook을 활용한 UI 컴포넌트 개발',
+            '<https://gift-checker-storybook.vercel.app/?path=/docs/design-systems-atoms-inputtext--docs>storybook을 활용한 UI 컴포넌트 개발',
             'Next.js 사용',
         ],
         tabContents: [
@@ -154,7 +154,6 @@ export const PROJECT = [
             'Vercel',
         ],
     },
-    
 ];
 
 export const ACTIVITY = [
@@ -174,9 +173,7 @@ export const ACTIVITY = [
         subtitle: '백준 및 프로그래머스 알고리즘 문제 풀이 스터디',
         term: '2021.10 ~ 진행중',
         group: '개인 스터디',
-        detail: [
-            '하루 한 문제 해결을 목표로 현재 약 400문제 해결',
-        ],
+        detail: ['하루 한 문제 해결을 목표로 현재 약 400문제 해결'],
     },
 ];
 
@@ -187,8 +184,6 @@ export const EDUCATION = [
         subtitle: '약 4주간 3개의 과제를 해결하는 프리코스 진행',
         term: '2022.10 ~ 2022.11',
         group: '교육',
-        detail: [
-            '한 달간 매주 자바스크립트 과제를 해결하고, 피드백 반영'
-        ],
+        detail: ['한 달간 매주 자바스크립트 과제를 해결하고, 피드백 반영'],
     },
 ];
