@@ -24,7 +24,7 @@ const IntroText = () => {
             >
                 <p>{IntroConstants.IntroBody1}</p>
                 <p>{IntroConstants.IntroBody2}</p>
-                <p>{IntroConstants.IntroBody3}</p>
+                {/* <p>{IntroConstants.IntroBody3}</p> */}
             </span>
         </>
     );
