@@ -1,5 +1,0 @@
-export const TYPE = {
-    PROJECT: 'PROJECT',
-    ACTIVITY: 'ACTIVITY',
-    EDUCATION: 'EDUCATION',
-};
