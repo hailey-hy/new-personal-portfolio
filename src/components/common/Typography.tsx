@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from "react";
 
 interface TyposType {
-  typo: "h1" | "h2" | "h3" | "h4" | "p" | "small" | "muted" | "list";
+  typo: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "small" | "muted" | "list";
 }
 const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
   switch (typo) {
@@ -29,6 +29,12 @@ const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
           {children}
         </h4>
       );
+    case "h5":
+      return (
+        <h4 className="scroll-m-20 text-sm font-semibold tracking-tight">
+          {children}
+        </h4>
+      );
     case "p":
       return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
     case "small":
@@ -38,7 +44,9 @@ const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
     case "muted":
       return <p className="text-sm text-muted-foreground">{children}</p>;
     case "list":
-      return <ul className="my-6 ml-6 list-disc [&>li]:mt-2">{children}</ul>;
+      return (
+        <ul className="my-6 ml-6 list-disc [&>li]:mt-2 text-sm">{children}</ul>
+      );
   }
 
   return <></>;
