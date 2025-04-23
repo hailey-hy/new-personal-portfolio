@@ -1,7 +1,9 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import * as SiIcons from "react-icons/si";
+import Image from "next/image";
 
 const badgeVariants = cva(
   "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
@@ -21,16 +23,69 @@ const badgeVariants = cva(
       variant: "default",
     },
   }
-)
+);
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {}
-
-function Badge({ className, variant, ...props }: BadgeProps) {
-  return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
-  )
+    VariantProps<typeof badgeVariants> {
+  techName: string;
 }
 
-export { Badge, badgeVariants }
+const techToIconKey: Record<string, string> = {
+  "React.js": "SiReact",
+  "Next.js 14": "SiNextdotjs",
+  TypeScript: "SiTypescript",
+  "AWS Amplify": "SiAwsamplify",
+  "GitHub Actions": "SiGithubactions",
+  Storybook: "SiStorybook",
+  Playwright: "_custom_playwright",
+  "Styled-components": "SiStyledcomponents",
+  MobX: "SiMobx",
+  WebSocket: "SiWebsocket",
+};
+
+const techToColor: Record<string, string> = {
+  "React.js": "#61DAFB",
+  "Next.js 14": "#6B7280",
+  TypeScript: "#3178C6",
+  "AWS Amplify": "#FF9900",
+  "GitHub Actions": "#2088FF",
+  Storybook: "#FF4785",
+  Playwright: "#2E2E2E",
+  "Styled-components": "#DB7093",
+  MobX: "#FF9955",
+  WebSocket: "#35495E",
+};
+
+function Badge({ className, variant, techName, ...props }: BadgeProps) {
+  const iconKey = techName && techToIconKey[techName];
+  const IconComponent =
+    iconKey && iconKey !== "_custom_playwright"
+      ? SiIcons[iconKey as keyof typeof SiIcons]
+      : null;
+
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props}>
+      {iconKey === "_custom_playwright" ? (
+        <Image
+          src="/icons/playwright.svg"
+          alt="Playwright"
+          width={14}
+          height={14}
+          className="mr-1"
+        />
+      ) : (
+        IconComponent && (
+          <IconComponent
+            size={14}
+            className="mr-1"
+            color={techToColor[techName] || "inherit"}
+          />
+        )
+      )}
+      {techName}
+    </div>
+  );
+}
+
+export { Badge, badgeVariants };

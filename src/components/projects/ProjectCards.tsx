@@ -22,6 +22,10 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        <Typos typo="h5">목표</Typos>
+        <Typos typo="small">{project.goal}</Typos>
+      </CardContent>
+      <CardContent>
         <Typos typo="h5">주요 역할</Typos>
         <Typos typo="list">
           {project.mainRole.map((item, index) => (
@@ -38,10 +42,18 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
         </Typos>
       </CardContent>
       <CardContent>
+        <Typos typo="h5">인사이트</Typos>
+        <Typos typo="list">
+          {project.insight.map((item, index) => (
+            <li key={`insight-${index}`}>{item}</li>
+          ))}
+        </Typos>
+      </CardContent>
+      <CardContent>
         <Typos typo="h5">사용 기술 스택</Typos>
         <div className="flex gap-1 mt-6">
           {project.usedSkills.map((item, index) => (
-            <Badge key={`mainRole-${index}`}>{item}</Badge>
+            <Badge key={`mainRole-${index}`} techName={item} />
           ))}
         </div>
       </CardContent>
