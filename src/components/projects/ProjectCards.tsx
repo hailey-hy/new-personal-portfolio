@@ -26,15 +26,15 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
           <Typos typo="h3">{project.title}</Typos>
         </CardTitle>
         <CardDescription>
-          {project.subTitle} | {project.period}
+          {project.goal} | {project.period}
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      {/* <CardContent>
         <Typos typo="h5">목표</Typos>
         <Typos typo="list">
           <li>{project.goal}</li>
         </Typos>
-      </CardContent>
+      </CardContent> */}
       <CardContent>
         <div className="overflow-auto mb-6">
           <Table>

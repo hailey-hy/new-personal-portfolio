@@ -11,7 +11,29 @@ export interface ProjectType {
 
 export const PROJECTS: ProjectType[] = [
   {
-    title: "[사이드 프로젝트] 생성형 AI 프롬프트 저장 및 추천 서비스 개발",
+    title: "[사이드 프로젝트] AI 연동 스레드 콘텐츠 제작 서비스 개발",
+    subTitle: "디자인 시스템 구축 및 테스트 자동화 기반의 품질 개선",
+    period: "2024.04 ~ 진행중",
+    goal: "생성형 AI를 활용해 자동으로 콘텐츠를 제작하는 시스템 구축",
+    mainRole: [
+      "Storybook 기반 디자인 시스템 구축",
+      "Playwright E2E 테스트 자동화 도입",
+    ],
+    performance: ["UI 일관성 확보 및 생산성 향상", "품질 관리 체계 마련"],
+    usedSkills: [
+      "React.js",
+      "TypeScript",
+      "Storybook",
+      "Playwright",
+      "Styled-components",
+    ],
+    insight: [
+      "빠른 개발만큼 중요한 것은 코드 품질 관리와 시스템 일관성이라는 걸 체감했습니다.",
+      "디자인 시스템과 테스트 자동화는 개발 속도뿐 아니라 서비스 확장성과 유지보수성에 직결된다는 것을 경험했습니다.",
+    ],
+  },
+  {
+    title: "[사이드 프로젝트] 생성형 AI 프롬프트 저장 및 실행 서비스 개발",
     subTitle: "Next.js 14 기반 SSR 전환 및 SEO 최적화, 배포 자동화 구축",
     period: "2023.12 ~ 2024.03",
     goal: "사용자가 원하는 프롬프트를 쉽게 저장하고 추천받을 수 있는 플랫폼 구축",
@@ -34,29 +56,6 @@ export const PROJECTS: ProjectType[] = [
     insight: [
       "단순 기능 구현이 아니라, 검색 최적화/퍼포먼스 개선이 사용자 경험에 직결된다는 것을 체감했습니다.",
       "초기 개발 단계부터 운영성과를 고려한 설계(SEO, SNS OG 최적화, 배포 자동화)가 중요하다는 인사이트를 얻었습니다.",
-    ],
-  },
-  {
-    title: "[사이드 프로젝트] AI 연동 스레드 콘텐츠 제작 서비스 개발",
-    subTitle: "디자인 시스템 구축 및 테스트 자동화 기반의 품질 개선",
-    period: "2024.04 ~ 진행중",
-    goal: "생성형 AI를 활용해 자동으로 콘텐츠를 제작하는 시스템 구축",
-    mainRole: [
-      "Storybook 기반 디자인 시스템 구축",
-      "Playwright E2E 테스트 자동화 도입",
-      "반응형 UI 개발",
-    ],
-    performance: ["UI 일관성 확보 및 생산성 향상", "품질 관리 체계 마련"],
-    usedSkills: [
-      "React.js",
-      "TypeScript",
-      "Storybook",
-      "Playwright",
-      "Styled-components",
-    ],
-    insight: [
-      "빠른 개발만큼 중요한 것은 코드 품질 관리와 시스템 일관성이라는 걸 체감했습니다.",
-      "디자인 시스템과 테스트 자동화는 개발 속도뿐 아니라 서비스 확장성과 유지보수성에 직결된다는 것을 경험했습니다.",
     ],
   },
   {
