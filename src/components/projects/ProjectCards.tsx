@@ -20,7 +20,7 @@ import { Badge } from "../ui/badge";
 
 const ProjectCards = ({ project }: { project: ProjectType }) => {
   return (
-    <Card className="max-w-4xl">
+    <Card className="max-w-4xl w-full">
       <CardHeader>
         <CardTitle>
           <Typos typo="h3">{project.title}</Typos>
