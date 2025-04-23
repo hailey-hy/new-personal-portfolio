@@ -45,7 +45,7 @@ const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
       return <p className="text-sm text-muted-foreground">{children}</p>;
     case "list":
       return (
-        <ul className="my-6 ml-6 list-disc [&>li]:mt-2 text-sm">{children}</ul>
+        <ul className="my-3 ml-5  list-disc [&>li]:mt-2 text-sm">{children}</ul>
       );
   }
 

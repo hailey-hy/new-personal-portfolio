@@ -21,8 +21,7 @@ export const PROJECTS: ProjectType[] = [
       "반응형 UI 개발",
     ],
     performance: [
-      "SNS 공유 최적화로 사용자 3,100명 확보",
-      "유료 결제자 10명 이상 확보",
+      "SNS 공유 최적화로 사용자 3,100명, 유료 결제자 10명 이상 확보",
       "배포 효율화",
     ],
     usedSkills: [

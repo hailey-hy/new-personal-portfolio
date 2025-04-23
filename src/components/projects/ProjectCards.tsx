@@ -6,13 +6,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import Typos from "../common/Typography";
 import { ProjectType } from "@/constants/project";
 import { Badge } from "../ui/badge";
 
 const ProjectCards = ({ project }: { project: ProjectType }) => {
   return (
-    <Card>
+    <Card className="max-w-4xl">
       <CardHeader>
         <CardTitle>
           <Typos typo="h3">{project.title}</Typos>
@@ -23,35 +31,35 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
       </CardHeader>
       <CardContent>
         <Typos typo="h5">목표</Typos>
-        <Typos typo="small">{project.goal}</Typos>
-      </CardContent>
-      <CardContent>
-        <Typos typo="h5">주요 역할</Typos>
         <Typos typo="list">
-          {project.mainRole.map((item, index) => (
-            <li key={`mainRole-${index}`}>{item}</li>
-          ))}
+          <li>{project.goal}</li>
         </Typos>
       </CardContent>
       <CardContent>
-        <Typos typo="h5">성과</Typos>
-        <Typos typo="list">
-          {project.performance.map((item, index) => (
-            <li key={`performance-${index}`}>{item}</li>
-          ))}
-        </Typos>
-      </CardContent>
-      <CardContent>
-        <Typos typo="h5">인사이트</Typos>
-        <Typos typo="list">
-          {project.insight.map((item, index) => (
-            <li key={`insight-${index}`}>{item}</li>
-          ))}
-        </Typos>
+        <div className="overflow-auto mb-6">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-1/2">주요 역할</TableHead>
+                <TableHead>성과</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {project.mainRole.map((role, index) => (
+                <TableRow key={`role-performance-${index}`}>
+                  <TableCell className="align-top">{role}</TableCell>
+                  <TableCell className="align-top">
+                    {project.performance[index] ?? "—"}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </CardContent>
       <CardContent>
         <Typos typo="h5">사용 기술 스택</Typos>
-        <div className="flex gap-1 mt-6">
+        <div className="flex gap-1 mt-3">
           {project.usedSkills.map((item, index) => (
             <Badge key={`mainRole-${index}`} techName={item} />
           ))}
