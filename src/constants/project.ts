@@ -21,6 +21,7 @@ export const PROJECTS: ProjectType[] = [
     ],
     performance: ["UI 일관성 확보 및 생산성 향상", "품질 관리 체계 마련"],
     usedSkills: [
+      "Next.js 14",
       "React.js",
       "TypeScript",
       "Storybook",

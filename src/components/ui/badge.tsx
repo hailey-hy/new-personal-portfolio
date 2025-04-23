@@ -6,7 +6,7 @@ import * as SiIcons from "react-icons/si";
 import Image from "next/image";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex h-fit items-center rounded-md border md:px-2.5 md:py-0.5 py-[3px] px-[3px] text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {

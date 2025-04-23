@@ -59,7 +59,7 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
       </CardContent>
       <CardContent>
         <Typos typo="h5">사용 기술 스택</Typos>
-        <div className="flex gap-1 mt-3">
+        <div className="flex gap-1 mt-3 flex-wrap">
           {project.usedSkills.map((item, index) => (
             <Badge key={`mainRole-${index}`} techName={item} />
           ))}
