@@ -5,7 +5,7 @@ import Typos from "../common/Typography";
 const AboutMe = () => {
   const aboutMe = ABOUT_ME;
   return (
-    <div className="mb-5">
+    <div className="flex flex-col mb-5">
       <Typos typo="h3">{aboutMe.introduction}</Typos>
       <Typos typo="p">{aboutMe.detail}</Typos>
     </div>

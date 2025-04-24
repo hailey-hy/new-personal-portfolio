@@ -6,7 +6,7 @@ import * as SiIcons from "react-icons/si";
 import Image from "next/image";
 
 const badgeVariants = cva(
-  "inline-flex h-fit items-center rounded-md border md:px-2.5 md:py-0.5 py-[3px] px-[3px] text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex h-fit w-fit items-center rounded-md border md:px-2.5 md:py-0.5 py-[3px] px-[3.5px] text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
@@ -27,7 +27,9 @@ const badgeVariants = cva(
 
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {
+    VariantProps<typeof badgeVariants> {}
+
+interface TechBadgeProps {
   techName: string;
 }
 
@@ -57,7 +59,12 @@ const techToColor: Record<string, string> = {
   WebSocket: "#35495E",
 };
 
-function Badge({ className, variant, techName, ...props }: BadgeProps) {
+function TechBadge({
+  className,
+  variant,
+  techName,
+  ...props
+}: BadgeProps & TechBadgeProps) {
   const iconKey = techName && techToIconKey[techName];
   const IconComponent =
     iconKey && iconKey !== "_custom_playwright"
@@ -88,4 +95,12 @@ function Badge({ className, variant, techName, ...props }: BadgeProps) {
   );
 }
 
-export { Badge, badgeVariants };
+function Badge({ className, variant, children, ...props }: BadgeProps) {
+  return (
+    <div className={cn(badgeVariants({ variant }), className)} {...props}>
+      {children}
+    </div>
+  );
+}
+
+export { TechBadge, Badge, badgeVariants };

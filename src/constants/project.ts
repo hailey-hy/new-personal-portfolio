@@ -1,4 +1,5 @@
 export interface ProjectType {
+  subject: "사이드" | "회사";
   title: string;
   subTitle: string;
   period: string;
@@ -11,7 +12,8 @@ export interface ProjectType {
 
 export const PROJECTS: ProjectType[] = [
   {
-    title: "[사이드 프로젝트] AI 연동 스레드 콘텐츠 제작 서비스 개발",
+    subject: "사이드",
+    title: "AI 연동 스레드 콘텐츠 제작 서비스 개발",
     subTitle: "디자인 시스템 구축 및 테스트 자동화 기반의 품질 개선",
     period: "2024.04 ~ 진행중",
     goal: "생성형 AI를 활용해 자동으로 콘텐츠를 제작하는 시스템 구축",
@@ -34,7 +36,8 @@ export const PROJECTS: ProjectType[] = [
     ],
   },
   {
-    title: "[사이드 프로젝트] 생성형 AI 프롬프트 저장 및 실행 서비스 개발",
+    subject: "사이드",
+    title: "생성형 AI 프롬프트 저장 및 실행 서비스 개발",
     subTitle: "Next.js 14 기반 SSR 전환 및 SEO 최적화, 배포 자동화 구축",
     period: "2023.12 ~ 2024.03",
     goal: "사용자가 원하는 프롬프트를 쉽게 저장하고 추천받을 수 있는 플랫폼 구축",
@@ -60,7 +63,8 @@ export const PROJECTS: ProjectType[] = [
     ],
   },
   {
-    title: "[회사 프로젝트] 티맥스와플 TALK 실시간 메신저 개발",
+    subject: "회사",
+    title: "티맥스와플 TALK 실시간 메신저 개발",
     subTitle: "WebSocket 기반 실시간 채팅 시스템 및 iframe 통합 구조 설계",
     period: "2022.07 ~ 2023.12",
     goal: "대규모 사용자를 대상으로 실시간 메신저 서비스 구축",

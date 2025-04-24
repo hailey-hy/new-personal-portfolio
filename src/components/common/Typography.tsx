@@ -36,7 +36,11 @@ const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
         </h4>
       );
     case "p":
-      return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
+      return (
+        <p className="leading-7 [&:not(:first-child)]:mt-6 whitespace-pre-line">
+          {children}
+        </p>
+      );
     case "small":
       return (
         <small className="text-sm font-medium leading-none">{children}</small>

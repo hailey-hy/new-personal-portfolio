@@ -16,12 +16,13 @@ import {
 } from "@/components/ui/table";
 import Typos from "../common/Typography";
 import { ProjectType } from "@/constants/project";
-import { Badge } from "../ui/badge";
+import { Badge, TechBadge } from "../ui/badge";
 
 const ProjectCards = ({ project }: { project: ProjectType }) => {
   return (
-    <Card className="max-w-4xl w-full">
+    <Card className="max-w-[1000px] w-full">
       <CardHeader>
+        <Badge variant={"outline"}>{project.subject}</Badge>
         <CardTitle>
           <Typos typo="h3">{project.title}</Typos>
         </CardTitle>
@@ -61,7 +62,7 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
         <Typos typo="h5">사용 기술 스택</Typos>
         <div className="flex gap-1 mt-3 flex-wrap">
           {project.usedSkills.map((item, index) => (
-            <Badge key={`mainRole-${index}`} techName={item} />
+            <TechBadge key={`mainRole-${index}`} techName={item} />
           ))}
         </div>
       </CardContent>
