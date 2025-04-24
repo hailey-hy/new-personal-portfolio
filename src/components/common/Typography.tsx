@@ -25,7 +25,7 @@ const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
       );
     case "h4":
       return (
-        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-left w-full">
+        <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-left w-full max-w-[1000px]">
           {children}
         </h4>
       );

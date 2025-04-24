@@ -17,55 +17,70 @@ import {
 import Typos from "../common/Typography";
 import { ProjectType } from "@/constants/project";
 import { Badge, TechBadge } from "../ui/badge";
+import { motion } from "framer-motion";
+
+export const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 const ProjectCards = ({ project }: { project: ProjectType }) => {
   return (
     <Card className="max-w-[1000px] w-full">
-      <CardHeader>
-        <Badge variant={"outline"}>{project.subject}</Badge>
-        <CardTitle>
-          <Typos typo="h3">{project.title}</Typos>
-        </CardTitle>
-        <CardDescription>
-          {project.goal} | {project.period}
-        </CardDescription>
-      </CardHeader>
-      {/* <CardContent>
+      <motion.div variants={cardVariants}>
+        <CardHeader>
+          <Badge variant={"outline"}>{project.subject}</Badge>
+          <CardTitle>
+            <Typos typo="h3">{project.title}</Typos>
+          </CardTitle>
+          <CardDescription>
+            {project.goal} | {project.period}
+          </CardDescription>
+        </CardHeader>
+        {/* <CardContent>
         <Typos typo="h5">목표</Typos>
         <Typos typo="list">
           <li>{project.goal}</li>
         </Typos>
       </CardContent> */}
-      <CardContent>
-        <div className="overflow-auto mb-6">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-1/2">주요 역할</TableHead>
-                <TableHead>성과</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {project.mainRole.map((role, index) => (
-                <TableRow key={`role-performance-${index}`}>
-                  <TableCell className="align-top">{role}</TableCell>
-                  <TableCell className="align-top">
-                    {project.performance[index] ?? "—"}
-                  </TableCell>
+        <CardContent>
+          <div className="overflow-auto mb-6">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-1/2">주요 역할</TableHead>
+                  <TableHead>성과</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </CardContent>
-      <CardContent>
-        <Typos typo="h5">사용 기술 스택</Typos>
-        <div className="flex gap-1 mt-3 flex-wrap">
-          {project.usedSkills.map((item, index) => (
-            <TechBadge key={`mainRole-${index}`} techName={item} />
-          ))}
-        </div>
-      </CardContent>
+              </TableHeader>
+              <TableBody>
+                {project.mainRole.map((role, index) => (
+                  <TableRow key={`role-performance-${index}`}>
+                    <TableCell className="align-top">{role}</TableCell>
+                    <TableCell className="align-top">
+                      {project.performance[index] ?? "—"}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
+        </CardContent>
+        <CardContent>
+          <Typos typo="h5">사용 기술 스택</Typos>
+          <div className="flex gap-1 mt-3 flex-wrap">
+            {project.usedSkills.map((item, index) => (
+              <TechBadge key={`mainRole-${index}`} techName={item} />
+            ))}
+          </div>
+        </CardContent>
+      </motion.div>
     </Card>
   );
 };
