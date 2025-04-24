@@ -7,13 +7,8 @@ export interface ExperienceType {
 // Experience
 export const EXPERIENCES: ExperienceType[] = [
   {
-    title: "총 경력",
-    period: "2년 (회사 경력 1년 6개월 + 사이드 프로젝트 5개월)",
-    description: [],
-  },
-  {
-    title: "회사 경력 (티맥스와플)",
-    period: "2022.07 ~ 2023.12",
+    title: "티맥스와플",
+    period: "2022.07 ~ 2023.12 | 1년 5개월",
     description: [
       "대규모 협업 환경에서 실시간 메신저 서비스 개발",
       "WebSocket 기반 통신 기능 및 구조 설계",
