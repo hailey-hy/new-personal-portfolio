@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from "react";
+import { PiNotepadDuotone } from "react-icons/pi";
 
 interface TyposType {
   typo: "h1" | "h2" | "h3" | "h4" | "h5" | "p" | "small" | "muted" | "list";
@@ -49,7 +50,16 @@ const Typos = ({ typo, children }: PropsWithChildren<TyposType>) => {
       return <p className="text-sm text-muted-foreground">{children}</p>;
     case "list":
       return (
-        <ul className="my-3 ml-5  list-disc [&>li]:mt-2 text-sm">{children}</ul>
+        <ul className="my-3 ml-5  list-disc [&>li]:mt-2 text-base">
+          {React.Children.map(children, (child, idx) => (
+            <li key={idx} className="flex items-start gap-2">
+              <span className="mt-1 text-primary">
+                <PiNotepadDuotone size={14} />
+              </span>
+              <>{child}</>
+            </li>
+          ))}
+        </ul>
       );
   }
 

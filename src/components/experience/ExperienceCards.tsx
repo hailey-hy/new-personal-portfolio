@@ -10,6 +10,7 @@ import Typos from "../common/Typography";
 import { ExperienceType } from "@/constants/experience";
 import { motion } from "framer-motion";
 import { cardVariants } from "../projects/ProjectCards";
+import { Badge } from "../ui/badge";
 
 const ExperienceCards = ({ experience }: { experience: ExperienceType }) => {
   return (
@@ -19,14 +20,17 @@ const ExperienceCards = ({ experience }: { experience: ExperienceType }) => {
           <CardTitle>
             <Typos typo="h3">{experience.title}</Typos>
           </CardTitle>
-          <CardDescription>{experience.period}</CardDescription>
+          <div className="flex gap-3">
+            <CardDescription>{experience.period}</CardDescription>
+            <Badge variant="secondary">{experience.role}</Badge>
+          </div>
         </CardHeader>
         <CardContent>
-          <Typos typo="list">
-            {experience.description.map((item, index) => (
-              <li key={`experience-item-${index}`}>{item}</li>
-            ))}
-          </Typos>
+          {experience.description.map((item, index) => (
+            <Typos typo="list" key={`experience-items-${index}`}>
+              {item}
+            </Typos>
+          ))}
         </CardContent>
       </motion.div>
     </Card>

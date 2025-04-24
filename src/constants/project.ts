@@ -1,6 +1,7 @@
 export interface ProjectType {
   subject: "사이드" | "회사";
   title: string;
+  id: string;
   subTitle: string;
   period: string;
   goal: string;
@@ -13,6 +14,7 @@ export interface ProjectType {
 export const PROJECTS: ProjectType[] = [
   {
     subject: "사이드",
+    id: "sigmine",
     title: "AI 연동 스레드 콘텐츠 제작 서비스 개발",
     subTitle: "디자인 시스템 구축 및 테스트 자동화 기반의 품질 개선",
     period: "2024.04 ~ 진행중",
@@ -37,6 +39,7 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     subject: "사이드",
+    id: "pocket-prompt",
     title: "생성형 AI 프롬프트 저장 및 실행 서비스 개발",
     subTitle: "Next.js 14 기반 SSR 전환 및 SEO 최적화, 배포 자동화 구축",
     period: "2023.12 ~ 2024.03",
@@ -64,6 +67,7 @@ export const PROJECTS: ProjectType[] = [
   },
   {
     subject: "회사",
+    id: "talk",
     title: "티맥스와플 TALK 실시간 메신저 개발",
     subTitle: "WebSocket 기반 실시간 채팅 시스템 및 iframe 통합 구조 설계",
     period: "2022.07 ~ 2023.12",
