@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IoIosLink } from "react-icons/io";
+import { RiArrowRightDownFill } from "react-icons/ri";
 import { Link as ScrollLink, LinkProps } from "react-scroll";
 
 export interface ExperienceType {
@@ -18,7 +18,19 @@ export const EXPERIENCES: ExperienceType[] = [
     role: "프론트엔드 팀원",
     link: "https://www.tmax.co.kr/tmaxwapl",
     description: [
-      "업무용 협업툴을 제작하는 회사에서 실시간 채팅 서비스(TALK)를 개발했습니다.",
+      <>
+        업무용 협업툴을 제작하는 회사에서 실시간 채팅 서비스
+        <Link
+          to="talk"
+          smooth={true}
+          offset={-100}
+          duration={600}
+          className="flex items-center gap-[1px] text-indigo-400 cursor-pointer"
+        >
+          TALK <RiArrowRightDownFill className="text-indigo-400" size={14} />
+        </Link>
+        를 개발했습니다.
+      </>,
       "기획자, 백엔드 개발자, QA 엔지니어들과 함께 대규모 협업을 경험했습니다.",
     ],
   },
@@ -33,21 +45,23 @@ export const EXPERIENCES: ExperienceType[] = [
         <Link
           to="pocket-prompt"
           smooth={true}
-          offset={-100} // 상단 여백 조절
+          offset={-100}
           duration={600}
           className="flex items-center gap-[1px] text-indigo-400 cursor-pointer"
         >
-          포켓 프롬프트 <IoIosLink className="text-indigo-400" size={14} />
+          포켓 프롬프트{" "}
+          <RiArrowRightDownFill className="text-indigo-400" size={14} />
         </Link>
         , B2B 프로덕트{" "}
         <Link
           to="sigmine"
           smooth={true}
-          offset={-100} // 상단 여백 조절
+          offset={-100}
           duration={600}
           className="flex items-center gap-[1px] text-indigo-400 cursor-pointer"
         >
-          시그마인 <IoIosLink className="text-indigo-400 " size={14} />
+          시그마인{" "}
+          <RiArrowRightDownFill className="text-indigo-400 " size={14} />
         </Link>
         을 개발했습니다.
       </>,

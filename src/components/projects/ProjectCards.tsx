@@ -47,7 +47,7 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
               <Typos typo="h3">{project.title}</Typos>
             </CardTitle>
             <CardDescription>
-              {project.goal} | {project.period}
+              {project.subTitle} | {project.period}
             </CardDescription>
           </CardHeader>
           {/* <CardContent>

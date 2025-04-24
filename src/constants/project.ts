@@ -15,8 +15,8 @@ export const PROJECTS: ProjectType[] = [
   {
     subject: "사이드",
     id: "sigmine",
-    title: "AI 연동 스레드 콘텐츠 제작 서비스 개발",
-    subTitle: "디자인 시스템 구축 및 테스트 자동화 기반의 품질 개선",
+    title: "시그마인",
+    subTitle: "AI 연동 마케팅 콘텐츠 제작 서비스 (B2B)",
     period: "2024.04 ~ 진행중",
     goal: "생성형 AI를 활용해 자동으로 콘텐츠를 제작하는 시스템 구축",
     mainRole: [
@@ -40,8 +40,8 @@ export const PROJECTS: ProjectType[] = [
   {
     subject: "사이드",
     id: "pocket-prompt",
-    title: "생성형 AI 프롬프트 저장 및 실행 서비스 개발",
-    subTitle: "Next.js 14 기반 SSR 전환 및 SEO 최적화, 배포 자동화 구축",
+    title: "포켓 프롬프트",
+    subTitle: "생성형 AI 프롬프트 저장 및 실행 서비스 (B2C)",
     period: "2023.12 ~ 2024.03",
     goal: "사용자가 원하는 프롬프트를 쉽게 저장하고 추천받을 수 있는 플랫폼 구축",
     mainRole: [
