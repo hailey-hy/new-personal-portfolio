@@ -39,7 +39,7 @@ const Experience = () => {
       variants={listVariants}
     >
       <div className="flex gap-2 flex-col w-full items-center mb-5">
-        <Typos typo="h4">경력</Typos>
+        <Typos typo="h4">Experience</Typos>
         {experience.map((item) => (
           <ExperienceCards experience={item} key={`experience-${item.title}`} />
         ))}

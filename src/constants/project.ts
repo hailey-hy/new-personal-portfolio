@@ -1,6 +1,8 @@
 export interface ProjectType {
   subject: "사이드" | "회사";
   title: string;
+  link?: string;
+  github?: string;
   id: string;
   subTitle: string;
   period: string;
@@ -20,7 +22,7 @@ export const PROJECTS: ProjectType[] = [
     period: "2024.04 ~ 진행중",
     goal: "생성형 AI를 활용해 자동으로 콘텐츠를 제작하는 시스템 구축",
     mainRole: [
-      "Storybook 기반 디자인 시스템 구축",
+      "공통 UI 추출하여 Storybook 기반 디자인 시스템 구축 및 적용",
       "Playwright E2E 테스트 자동화 도입",
     ],
     performance: ["UI 일관성 확보 및 생산성 향상", "품질 관리 체계 마련"],
@@ -36,6 +38,8 @@ export const PROJECTS: ProjectType[] = [
       "빠른 개발만큼 중요한 것은 코드 품질 관리와 시스템 일관성이라는 걸 체감했습니다.",
       "디자인 시스템과 테스트 자동화는 개발 속도뿐 아니라 서비스 확장성과 유지보수성에 직결된다는 것을 경험했습니다.",
     ],
+    link: "https://sigmine.ai/",
+    github: "https://github.com/ai-surfers/sigmine-ai-frontend",
   },
   {
     subject: "사이드",
@@ -49,10 +53,7 @@ export const PROJECTS: ProjectType[] = [
       "AWS Amplify 기반 CI/CD 구축",
       "반응형 UI 개발",
     ],
-    performance: [
-      "SNS 공유 최적화로 사용자 3,100명, 유료 결제자 10명 이상 확보",
-      "배포 효율화",
-    ],
+    performance: ["사용자 3,100명, 유료 결제자 10명 이상 확보", "배포 효율화"],
     usedSkills: [
       "Next.js 14",
       "React.js",
@@ -64,16 +65,18 @@ export const PROJECTS: ProjectType[] = [
       "단순 기능 구현이 아니라, 검색 최적화/퍼포먼스 개선이 사용자 경험에 직결된다는 것을 체감했습니다.",
       "초기 개발 단계부터 운영성과를 고려한 설계(SEO, SNS OG 최적화, 배포 자동화)가 중요하다는 인사이트를 얻었습니다.",
     ],
+    link: "https://pocket-prompt.com/text",
+    github: "https://github.com/ai-surfers/pocket-prompt-frontend",
   },
   {
     subject: "회사",
     id: "talk",
-    title: "티맥스와플 TALK 실시간 메신저 개발",
-    subTitle: "WebSocket 기반 실시간 채팅 시스템 및 iframe 통합 구조 설계",
+    title: "TALK",
+    subTitle: "업무용 실시간 채팅 서비스 개발",
     period: "2022.07 ~ 2023.12",
     goal: "대규모 사용자를 대상으로 실시간 메신저 서비스 구축",
     mainRole: [
-      "WebSocket 기반 실시간 채팅 기능 개발",
+      "WebSocket 기반 실시간 채팅 기능 및 부가 기능 개발",
       "iframe 통합 아키텍처 설계",
       "모듈화 및 라이브러리화",
     ],
