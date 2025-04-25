@@ -26,7 +26,7 @@ const Header = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
   return (
-    <div className="w-full flex justify-end p-3 gap-8">
+    <div className="w-full max-w-[1000px] m-auto flex justify-end p-3 gap-8">
       <TooltipProvider delayDuration={100}>
         <Tooltip>
           <TooltipTrigger>
