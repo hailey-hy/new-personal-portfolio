@@ -44,6 +44,9 @@ const techToIconKey: Record<string, string> = {
   "Styled-components": "SiStyledcomponents",
   MobX: "SiMobx",
   WebSocket: "SiWebsocket",
+  Recoil: "SiRecoil",
+  "TanStack-Query": "SiReactquery",
+  "React-hook-form": "SiReacthookform",
 };
 
 const techToColor: Record<string, string> = {
@@ -57,6 +60,9 @@ const techToColor: Record<string, string> = {
   "Styled-components": "#DB7093",
   MobX: "#FF9955",
   WebSocket: "#35495E",
+  Recoil: "#3578E5",
+  "TanStack-Query": "#FF4154",
+  "React-hook-form": "#EC5990",
 };
 
 function TechBadge({

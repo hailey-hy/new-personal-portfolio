@@ -27,6 +27,7 @@ import {
 } from "../ui/tooltip";
 import { IoIosLink } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import { RiArrowRightUpFill } from "react-icons/ri";
 
 export const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -62,10 +63,15 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <IoIosLink size={20} className="cursor-pointer" />
+                        <IoIosLink
+                          size={20}
+                          className="cursor-pointer hover:text-indigo-400"
+                        />
                       </a>
                     </TooltipTrigger>
-                    <TooltipContent>라이브 서비스 바로가기</TooltipContent>
+                    <TooltipContent className="inline-flex items-center bg-indigo-400">
+                      라이브 서비스 바로가기 <RiArrowRightUpFill />
+                    </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               )}
@@ -78,10 +84,15 @@ const ProjectCards = ({ project }: { project: ProjectType }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FaGithub size={20} className="cursor-pointer" />
+                        <FaGithub
+                          size={20}
+                          className="cursor-pointer hover:text-indigo-400"
+                        />
                       </a>
                     </TooltipTrigger>
-                    <TooltipContent>오픈 소스 코드 보기</TooltipContent>
+                    <TooltipContent className="inline-flex items-center bg-indigo-400">
+                      오픈 소스 코드 보기 <RiArrowRightUpFill />
+                    </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
               )}

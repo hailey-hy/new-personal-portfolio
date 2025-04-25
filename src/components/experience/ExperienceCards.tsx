@@ -18,6 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
+import { RiArrowRightUpFill } from "react-icons/ri";
 
 const ExperienceCards = ({ experience }: { experience: ExperienceType }) => {
   return (
@@ -35,10 +36,19 @@ const ExperienceCards = ({ experience }: { experience: ExperienceType }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <IoIosLink size={20} className="cursor-pointer" />
+                      <IoIosLink
+                        size={20}
+                        className="cursor-pointer hover:text-indigo-400"
+                      />
                     </a>
                   </TooltipTrigger>
-                  <TooltipContent>회사 홈페이지 보기</TooltipContent>
+                  <TooltipContent
+                    side="top"
+                    sideOffset={10}
+                    className="inline-flex items-center bg-indigo-400"
+                  >
+                    회사 홈페이지 보기 <RiArrowRightUpFill />{" "}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             )}
