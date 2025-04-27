@@ -25,7 +25,7 @@ export const PROJECTS: ProjectType[] = [
       "공통 UI 추출하여 Storybook 기반 디자인 시스템 구축 및 적용",
       "Playwright E2E 테스트 자동화 도입",
     ],
-    performance: ["UI 일관성 확보 및 생산성 향상", "품질 관리 체계 마련"],
+    performance: ["PoC 단계에서 핵심 기능 검증 및 테스트 완료"],
     usedSkills: [
       "Next.js 14",
       "React.js",
@@ -52,11 +52,14 @@ export const PROJECTS: ProjectType[] = [
     period: "2023.12 ~ 2024.03",
     goal: "사용자가 원하는 프롬프트를 쉽게 저장하고 추천받을 수 있는 플랫폼 구축",
     mainRole: [
-      "Next.js 14 기반 SSR 전환 및 SEO 최적화",
-      "AWS Amplify 기반 CI/CD 구축",
+      "SEO 개선을 위한 Next.js 14 기반 SSR 전환",
+      "Github Actions, AWS Amplify 기반 CI/CD 구축",
       "반응형 UI 개발",
     ],
-    performance: ["사용자 3,100명, 유료 결제자 10명 이상 확보", "배포 효율화"],
+    performance: [
+      "현재 라이브 운영 중이며, 실제 사용자 반응 기반 유지보수 진행 중",
+      "사용자 3,100명, 유료 결제자 10명 이상 확보",
+    ],
     usedSkills: [
       "Next.js 14",
       "React.js",
@@ -83,11 +86,11 @@ export const PROJECTS: ProjectType[] = [
     period: "2022.07 ~ 2023.12",
     goal: "대규모 사용자를 대상으로 실시간 메신저 서비스 구축",
     mainRole: [
-      "WebSocket 기반 실시간 채팅 기능 및 부가 기능 개발",
-      "iframe 통합 아키텍처 설계",
-      "모듈화 및 라이브러리화",
+      "WebSocket 기반 실시간 채팅 기능 및 투표, 공지 기능 개발",
+      "iframe 앱간 연계 기능 개발",
+      "npm 라이브러리화",
     ],
-    performance: ["안정적인 실시간 통신 구축", "통합 서비스 구조 확립"],
+    performance: ["서울시교육청, 육군본부 등에 납품 완료 및 유지보수 진행"],
     usedSkills: [
       "React.js",
       "TypeScript",
