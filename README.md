@@ -1,25 +1,48 @@
-## Haeyeon Jeon Portfolio
+# new-personal-portfolio
 
-<img src='https://github.com/hailey-hy/new-personal-portfolio/assets/93465128/d8b9f9e3-02ab-441c-bd8e-ec91c235dab3' width='500px'/>
+Next.js 14 기반 포트폴리오 웹사이트입니다.
 
--   [웹페이지 방문하기](https://haeyeon-portfolio.netlify.app/)
--   [개발 회고 보러가기](https://velog.io/@hailey-hy/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%9B%B9-%ED%8E%98%EC%9D%B4%EC%A7%80-%EA%B0%9C%EB%B0%9C-%ED%9A%8C%EA%B3%A0)
+---
 
-### 사용 기술
+## ✨ 기술 스택
 
--   Core: React, Typescript
--   CSS-in-JS: Emotion
--   Tool: Eslint, Prettier, Figma
--   Deploy: Netilfy
+- **Framework**: [Next.js 14](https://nextjs.org/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/), [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate)
+- **Animation**: [framer-motion](https://www.framer.com/motion/)
+- **Icons**: [lucide-react](https://lucide.dev/), [react-icons](https://react-icons.github.io/react-icons/)
+- **UI Components**: [Radix UI](https://www.radix-ui.com/)
+- **Dark Mode**: [next-themes](https://github.com/pacocoursey/next-themes)
+- **Scroll Animations**: [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer), [react-scroll](https://www.npmjs.com/package/react-scroll)
+- **Utility Libraries**: class-variance-authority, clsx, tailwind-merge
 
-### 주요 기능
+---
 
-1. useRef, forwardRef를 이용한 스크롤 이동 이벤트 기능 https://github.com/hailey-hy/new-personal-portfolio/pull/35
-2. 성능 개선을 위한 이미지 최적화 https://github.com/hailey-hy/new-personal-portfolio/pull/41
-3. 모바일, 태블릿, 데스크탑을 호환하는 반응형 디자인 https://github.com/hailey-hy/new-personal-portfolio/pull/46
+## 👉 주요 기능
 
-### 주요 이슈
+- ✅ **반응형 디자인**: 모든 디바이스에 최적화
+- ✅ **다크/라이트 모드 지원**
+- ✅ **부드러운 스크롤 애니메이션**
+- ✅ **Intersection Observer 기반 섹션 활성화 감지**
+- ✅ **툴팁, 아바타 등 접근성 높은 컴포넌트 구현**
+- ✅ **코드 최적화와 컴포넌트 재사용성 강화**
 
-1. 현재 컴포넌트 구조의 효율성 조사 https://github.com/hailey-hy/new-personal-portfolio/issues/33
-2. useRef로 참조한 DOM이 null이 되었을 때 https://github.com/hailey-hy/new-personal-portfolio/issues/34
-3. 유니온 타입 narrowing을 위한 옵셔널 체이닝 https://github.com/hailey-hy/new-personal-portfolio/issues/16
+---
+
+## 🌍 배포
+
+- **Vercel**을 통해 간편하게 배포됩니다.
+
+---
+
+## ✨ 기타
+
+- 코드 스타일은 ESLint + Tailwind CSS 권장 스타일을 따릅니다.
+
+---
+
+> 🌟 해당 프로젝트는 개인 포트폴리오 용도로 제작되었습니다.
+
+---
+
+**Made with ❤️ and Next.js**
