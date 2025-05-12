@@ -75,7 +75,7 @@ export const PROJECTS: ProjectType[] = [
       "단순 기능 구현이 아니라, 검색 최적화/퍼포먼스 개선이 사용자 경험에 직결된다는 것을 체감했습니다.",
       "초기 개발 단계부터 운영성과를 고려한 설계(SEO, SNS OG 최적화, 배포 자동화)가 중요하다는 인사이트를 얻었습니다.",
     ],
-    link: "https://pocket-prompt.com/text",
+    link: "https://pocket-prompt.com",
     github: "https://github.com/ai-surfers/pocket-prompt-frontend",
   },
   {

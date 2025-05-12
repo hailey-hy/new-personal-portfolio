@@ -14,18 +14,7 @@ Next.js 14 기반 포트폴리오 웹사이트입니다.
 - **UI Components**: [Radix UI](https://www.radix-ui.com/)
 - **Dark Mode**: [next-themes](https://github.com/pacocoursey/next-themes)
 - **Scroll Animations**: [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer), [react-scroll](https://www.npmjs.com/package/react-scroll)
-- **Utility Libraries**: class-variance-authority, clsx, tailwind-merge
-
----
-
-## 👉 주요 기능
-
-- ✅ **반응형 디자인**: 모든 디바이스에 최적화
-- ✅ **다크/라이트 모드 지원**
-- ✅ **부드러운 스크롤 애니메이션**
-- ✅ **Intersection Observer 기반 섹션 활성화 감지**
-- ✅ **툴팁, 아바타 등 접근성 높은 컴포넌트 구현**
-- ✅ **코드 최적화와 컴포넌트 재사용성 강화**
+- **Utility Libraries**: clsx, tailwind-merge
 
 ---
 
