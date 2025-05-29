@@ -22,6 +22,7 @@ export const PROJECTS: ProjectType[] = [
     period: "2024.04 ~ 진행중",
     goal: "생성형 AI를 활용해 자동으로 콘텐츠를 제작하는 시스템 구축",
     mainRole: [
+      "BFF 아키텍처로 쿠키 기반 SSR 인증 시스템 구현",
       "공통 UI 추출하여 Storybook 기반 디자인 시스템 구축 및 적용",
       "Playwright E2E 테스트 자동화 도입",
     ],
@@ -41,7 +42,7 @@ export const PROJECTS: ProjectType[] = [
       "빠른 개발만큼 중요한 것은 코드 품질 관리와 시스템 일관성이라는 걸 체감했습니다.",
       "디자인 시스템과 테스트 자동화는 개발 속도뿐 아니라 서비스 확장성과 유지보수성에 직결된다는 것을 경험했습니다.",
     ],
-    link: "https://sigmine.ai/",
+    link: "https://app.sigmine.ai/",
     github: "https://github.com/ai-surfers/sigmine-ai-frontend",
   },
   {

@@ -52,7 +52,10 @@ export const EXPERIENCES: ExperienceType[] = [
           포켓 프롬프트
           <RiArrowDownFill className="text-indigo-400" size={14} />
         </Link>
-        , B2B 프로덕트{" "}
+        를 개발하여 MAU 10,000명을 유치하고 월 구독 결제 10건을 달성했습니다.
+      </span>,
+      <span key="description-2">
+        B2B 프로덕트{" "}
         <Link
           to="sigmine"
           smooth={true}
@@ -63,9 +66,9 @@ export const EXPERIENCES: ExperienceType[] = [
           시그마인
           <RiArrowDownFill className="text-indigo-400 " size={14} />
         </Link>
-        을 개발했습니다.
+        을 개발하여 1개 기업에 납품하고 있으며, 추가 납품 계약이 진행되고
+        있습니다.
       </span>,
-      "MAU(활성 사용자) 10,000명을 유치하고 월 구독 결제 10건을 달성했습니다.",
     ],
   },
 ];
